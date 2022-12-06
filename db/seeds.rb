@@ -42,3 +42,15 @@ program_exercise.save
   )
   article.save!
 end
+
+10.times do
+  question = Question.new(
+    content: Faker::Movie.title,
+  )
+  answer = Answer.new(
+    content: Faker::Movie.title,
+  )
+ question.save!
+  answer.question = question
+ answer.save!
+end

@@ -6,4 +6,9 @@ class QuestionsController < ApplicationController
   def show
     @questions = Question.find(params[:id])
   end
+
+  private
+  def question_params
+    params.require(:question).permit(:id, :content)
+  end
 end
