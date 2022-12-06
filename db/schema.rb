@@ -25,6 +25,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
     t.string "category"
     t.string "video_url"
     t.integer "length"
+  end
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.text "content"
+    t.bigint "question_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.integer "reading_time"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,6 +78,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
 
   create_table "user_challenges", force: :cascade do |t|
     t.boolean "completed"
+  end
+  create_table "questions", force: :cascade do |t|
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -95,4 +116,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
   add_foreign_key "standing_goals", "users"
   add_foreign_key "users", "programs"
   add_foreign_key "users", "workplaces"
+  add_foreign_key "answers", "questions"
 end
