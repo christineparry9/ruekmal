@@ -1,7 +1,12 @@
 <h1>Articles#index</h1>
 <p>Find me in app/views/articles/index.html.erb</p>
+<h2>Quiz time!</h2>
+<p>question : <%= question_of_the_day = @questions.sample.content %>
+answer : <%= question_of_the_day.answers %>
 <ul>
   <% @articles.each do |article| %>
     <li><%= article.title %></li>
+    <%#= link_to article.title, "/articles/show/#{@article.id}" %>
+    <%= link_to article.title, article_path(article) %>
   <% end %>
 </ul>
