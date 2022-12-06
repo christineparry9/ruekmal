@@ -10,9 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_121810) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.integer "number_of_points"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "category"
+    t.string "video_url"
+    t.integer "length"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "program_exercises", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "exercise_id", null: false
+    t.bigint "program_id", null: false
+    t.index ["exercise_id"], name: "index_program_exercises_on_exercise_id"
+    t.index ["program_id"], name: "index_program_exercises_on_program_id"
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "name"
+    t.integer "program_length"
+    t.integer "standing_points_goal"
+    t.float "standing_goal"
+    t.float "overal_standing_goal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "standing_goals", force: :cascade do |t|
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "program_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["program_id"], name: "index_standing_goals_on_program_id"
+    t.index ["user_id"], name: "index_standing_goals_on_user_id"
+  end
+
+  create_table "user_challenges", force: :cascade do |t|
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +72,27 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_121810) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.boolean "number_of_points"
+    t.boolean "standing_status"
+    t.bigint "workplace_id", null: false
+    t.bigint "program_id", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["program_id"], name: "index_users_on_program_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["workplace_id"], name: "index_users_on_workplace_id"
   end
 
+  create_table "workplaces", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "program_exercises", "exercises"
+  add_foreign_key "program_exercises", "programs"
+  add_foreign_key "standing_goals", "programs"
+  add_foreign_key "standing_goals", "users"
+  add_foreign_key "users", "programs"
+  add_foreign_key "users", "workplaces"
 end
