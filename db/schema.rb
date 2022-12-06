@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "challenges", force: :cascade do |t|
-    t.integer "number_of_points"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "exercises", force: :cascade do |t|
-    t.string "category"
-    t.string "video_url"
-    t.integer "length"
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_104015) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,6 +27,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
     t.text "content"
     t.integer "reading_time"
     t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "challenges", force: :cascade do |t|
+    t.integer "number_of_points"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "category"
+    t.string "video_url"
+    t.integer "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,6 +65,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "standing_goals", force: :cascade do |t|
     t.boolean "completed"
     t.datetime "created_at", null: false
@@ -78,9 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
 
   create_table "user_challenges", force: :cascade do |t|
     t.boolean "completed"
-  end
-  create_table "questions", force: :cascade do |t|
-    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -94,7 +96,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
-    t.boolean "number_of_points"
+    t.integer "number_of_points"
     t.boolean "standing_status"
     t.bigint "workplace_id", null: false
     t.bigint "program_id", null: false
@@ -110,11 +112,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102455) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "answers", "questions"
   add_foreign_key "program_exercises", "exercises"
   add_foreign_key "program_exercises", "programs"
   add_foreign_key "standing_goals", "programs"
   add_foreign_key "standing_goals", "users"
   add_foreign_key "users", "programs"
   add_foreign_key "users", "workplaces"
-  add_foreign_key "answers", "questions"
 end

@@ -1,3 +1,19 @@
 <h1> hi <%= @user.first_name %> </h1>
+<p>Company - <%= @user.workplace.name %></p>
 <p>your current program is:<strong> <%= @user.program.name %> </strong></p>
 <p>your daily goal is:<strong> <%= @user.program.standing_goal.to_i %> minutes</strong></p>
+
+<br>
+
+<ul>
+<p><%= @user.workplace.name  %> leaderboard:</p>
+<% @user.workplace.users.each do |user| %>
+<li><%= user.first_name %> - <%= user.number_of_points %> </li>
+<% end %>
+</ul>
+<br>
+
+
+<%= link_to "articles", articles_path %>
+
+<%= link_to "exercises", exercises_path %>
