@@ -1,8 +1,34 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-<h2>Quiz time!</h2>
-<p>question : <%= @question.content %>
-answer : <%= @question.answer.content %>
+<div class="application-container ">
+<h1>Do you know...? Test your knowledge!</h1>
+<div class="quiz-card">
+  <div>
+    <p>question : <%= @question.content %>
+  </div>
+  <div class="quiz-card-answers">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="yes" name="answer" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Yes, that can have an impact.
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="no" name="answer" id="defaultCheck2">
+      <label class="form-check-label" for="defaultCheck2">
+        No, It cannot have an impact.
+      </label>
+    </div>
+      <button type="button" class="button-quiz">Submit</button>
+  </div>
+</div>
+
+<br>
+<div class="category-card">
+    <div><p>For you</p></div>
+    <div><p>Cat 2</p></div>
+    <div><p>Cat 3</p></div>
+    <div><p>Cat 4</p></div>
+  </div>
+</div>
 <ul>
   <% @articles.each do |article| %>
     <li><%= article.title %></li>
@@ -10,3 +36,5 @@ answer : <%= @question.answer.content %>
     <%= link_to article.title, article_path(article) %>
   <% end %>
 </ul>
+</div>
+</div>

@@ -1,0 +1,23 @@
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button-quiz {
+  display: block;
+  background-color: rgb(177, 234, 154);
+  border: none;
+  border-radius: 10px;
+  border-right: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
+  margin: 10px auto;
+}
