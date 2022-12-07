@@ -7,15 +7,20 @@
 
 .videocard{
   display:flex;
+  flex-wrap: wrap;
 
 }
 .eachvideo{
   padding-top: 10px;
   width: 270px;
-  height: 300px;
+  height: 250px;
   margin:10px;
   background-color: $ruekmaldarkblue;
   border-radius: 20px;
   color: white;
   padding-left:10px;
+}
+
+.iframe{
+  width:  350px;
 }
