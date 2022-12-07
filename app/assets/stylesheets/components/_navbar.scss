@@ -25,24 +25,15 @@
   position: relative;
 }
 
-.wrapper .sidebar ul li a .icon{
-  color: #dee4ec;
-  width: 30px;
-  display: inline-block;
-}
+
 
 .wrapper .sidebar ul li a:hover,
 .wrapper .sidebar ul li a.active{
-    color: #0c7db1;
-
     background: $ruekmaldarkblue;
-
+    border-top-left-radius: 70px 70px;
+    border-bottom-left-radius: 70px 70px;
 }
 
-.wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon{
-    color: #0c7db1;
-}
 
 .wrapper .sidebar ul li a:hover:before,
 .wrapper .sidebar ul li a.active:before{

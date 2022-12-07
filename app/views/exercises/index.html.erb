@@ -1,6 +1,13 @@
 <div class="c">
 
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'all')" id="defaultOpen">All</button>
+  <button class="tablinks" onclick="openCity(event, 'lower')">Lower Back</button>
+  <button class="tablinks" onclick="openCity(event, 'neck')">Neck</button>
+</div>
 
+<!-- Tab content -->
+<div id="all" class="tabcontent">
     <div class="videocard">
       <% @exercises.each do |exercise| %>
         <div class="eachvideo">
@@ -14,5 +21,66 @@
         </div>
       <% end %>
     </div>
+</div>
+
+<div id="lower" class="tabcontent">
+    <div class="videocard">
+      <% @exercises.each do |exercise| %>
+        <div class="eachvideo">
+          <div class="iframe">
+            <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+         </div>
+         <div>
+          <p> length: <%= exercise.length %>  minutes</p>
+          <p> <%= exercise.category %> </p>
+         </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+
+<div id="neck" class="tabcontent">
+    <div class="videocard">
+      <% @exercises.each do |exercise| %>
+        <div class="eachvideo">
+          <div class="iframe">
+            <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+         </div>
+         <div>
+          <p> length: <%= exercise.length %>  minutes</p>
+          <p> <%= exercise.category %> </p>
+         </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+
+
 
 </div>
+
+<script>
+
+document.getElementById("defaultOpen").click();
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
