@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    @questions = Question.all
+    @question = Question.all.sample
   end
 
   def show

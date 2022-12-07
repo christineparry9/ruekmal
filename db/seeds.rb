@@ -9,6 +9,7 @@
 require 'faker'
 User.destroy_all
 Article.destroy_all
+Exercise.destroy_all
 
 workplace = Workplace.new(name: "Microsoft")
 workplace.save
@@ -25,8 +26,11 @@ p user2
 user3 = User.new(number_of_points: 60, first_name: "Constance", program: program1, workplace: workplace, email: "constance@test.com", password: "testtest", password_confirmation: "testtest")
 user3.save!
 
-exercise1 = Exercise.new(category: "lower back", video_url: "www.test.com", length: 90)
+exercise1 = Exercise.new(category: "lower back", video_url: "https://www.youtube.com/embed/t_uR01Dx9Mk", length: 90)
 exercise1.save
+
+exercise2 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/U3DParHgSMc", length: 90)
+exercise2.save
 
 program_exercise = ProgramExercise.new(exercise: exercise1, program: program1)
 program_exercise.save
