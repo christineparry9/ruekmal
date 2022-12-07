@@ -1,7 +1,18 @@
-<h1>exercises</h1>
+<div class="c">
 
-<ul>
-  <% @exercises.each do |exercise| %>
-<iframe width="648" height="365" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-  <% end %>
-</ul>
+
+    <div class="videocard">
+      <% @exercises.each do |exercise| %>
+        <div class="eachvideo">
+          <div class="iframe">
+            <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+         </div>
+         <div>
+          <p> length: <%= exercise.length %>  minutes</p>
+          <p> <%= exercise.category %> </p>
+         </div>
+        </div>
+      <% end %>
+    </div>
+
+</div>

@@ -1,12 +1,14 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-<h2>Quiz time!</h2>
-<p>question : <%= @question.content %>
-answer : <%= @question.answer.content %>
-<ul>
-  <% @articles.each do |article| %>
-    <li><%= article.title %></li>
-    <%#= link_to article.title, "/articles/show/#{@article.id}" %>
-    <%= link_to article.title, article_path(article) %>
-  <% end %>
-</ul>
+<div class="c">
+  <h1>Articles#index</h1>
+  <p>Find me in app/views/articles/index.html.erb</p>
+  <h2>Quiz time!</h2>
+  <p>question : <%= @question.content %>
+  answer : <%= @question.answer.content %>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><%= article.title %></li>
+      <%#= link_to article.title, "/articles/show/#{@article.id}" %>
+      <%= link_to article.title, article_path(article) %>
+    <% end %>
+  </ul>
+</div>

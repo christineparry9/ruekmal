@@ -1,17 +1,47 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  height: 100%;
-  width: 150px;
-  position: absolute;
+.navlist{
+  list-style: none;
+}
+
+.wrapper .sidebar{
+  background: #FFEBCB
+;
+  position: fixed;
+  top: 0;
   left: 0;
-  background-color: lightblue;
+  width: 100px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+.wrapper .sidebar ul li a{
   display: block;
+  padding: 13px 30px;
+  color: black;
+  font-size: 16px;
+  position: relative;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.wrapper .sidebar ul li a .icon{
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background: $ruekmaldarkblue;
+
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
 }
