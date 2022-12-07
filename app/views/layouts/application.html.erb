@@ -11,15 +11,14 @@
   </head>
 
   <body>
-     <div id="wrapper">
-         <div id="sidebar-wrapper">
-           <%= render "shared/navbar" %>
-         </div>
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <%= render "shared/navbar" %>
       </div>
-
-    <%= render "shared/flashes" %>
-
-
-    <%= yield %>
+    </div>
+    <div class="application-container">
+      <%= render "shared/flashes" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

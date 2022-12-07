@@ -1,9 +1,9 @@
 class AnswersController < ApplicationController
   def index
-    @answers = answer.all
+    @answers = Answer.all
   end
 
   def show
-    @answers = answer.find(params[:id])
+    @answers = Answer.find(params[:id])
   end
 end
