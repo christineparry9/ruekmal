@@ -2,6 +2,8 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "components/background";
+
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -14,3 +16,6 @@
 body {
   counter-reset: section;
 }
+@import "components/containers";
+@import "components/cards";
+@import "components/buttons";
