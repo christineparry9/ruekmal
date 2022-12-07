@@ -18,23 +18,23 @@
 
                 <ul class="navlist">
                   <li>
-                  <h6>BUDDY</h6>
+                  <h4>BUDDY</h4>
                   </li>
-                  <li>
+                  <li class="navlistitem">
                   <% if user_signed_in? %>
                      <%= link_to user_path(current_user) do   %>
-                       <%= image_tag "home icon.png", alt: "home icon", width: 20 %>
+                       <%= image_tag "home icon.png", alt: "home icon", width: 50 %>
                       <% end %>
                     <% end %>
                   </li>
-                  <li>
+                  <li class="navlistitem">
                     <%= link_to articles_path do   %>
-                      <%= image_tag "knowledge.png", alt: "knowledge icon", width: 20 %>
+                      <%= image_tag "knowledge.png", alt: "knowledge icon", width: 50 %>
                     <% end %>
                   </li>
-                  <li>
+                  <li class="navlistitem">
                     <%= link_to exercises_path do   %>
-                      <%= image_tag "exercise.png", alt: "exercise icon", width: 20 %>
+                      <%= image_tag "exercise.png", alt: "exercise icon", width: 50 %>
                     <% end %>
                   </li>
                 </ul>
