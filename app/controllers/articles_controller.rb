@@ -12,4 +12,6 @@ private
   def article_params
     params.require(:article).permit(:id, :title)
   end
+
+
 end

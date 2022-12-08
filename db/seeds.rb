@@ -8,6 +8,7 @@
 
 require 'faker'
 User.destroy_all
+ProgramExercise.destroy_all
 Article.destroy_all
 Exercise.destroy_all
 
@@ -50,7 +51,8 @@ program_exercise.save
 10.times do
   article = Article.new(
     title: Faker::Movie.title,
-    reading_time: rand(1..5)
+    reading_time: rand(1..5),
+    category: ["for you", "lower back", "neck", "shoulder"].sample,
   )
   article.save!
 end
@@ -61,6 +63,7 @@ end
   )
   answer = Answer.new(
     content: Faker::Movie.title,
+    correct: [true, false].sample
   )
  question.save!
   answer.question = question
