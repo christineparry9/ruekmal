@@ -1,0 +1,45 @@
+.c{
+  margin: auto;
+  margin-left: 250px;
+  margin-top: 50px;
+  width: 900px
+}
+
+.videocard{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+.eachvideo{
+  padding-top: 10px;
+  width: 270px;
+  height: 250px;
+  margin:10px;
+  background-color: $ruekmaldarkblue;
+  border-radius: 20px;
+  color: white;
+  padding-left:10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.iframe{
+  width:  350px;
+}
+
+.dash{
+  display: flex;
+  justify-content: space-between
+}
+
+.counter{
+  margin-right: 100px;
+}
+
+.counterbutton{
+  color: white;
+  background-color: $ruekmaldarkblue;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: $ruekmallightgreen;
+  border-style: solid;
+}

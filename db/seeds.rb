@@ -32,6 +32,18 @@ exercise1.save
 exercise2 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/U3DParHgSMc", length: 90)
 exercise2.save
 
+exercise3 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/XeXz8fIZDCE", length: 90)
+exercise3.save
+
+exercise4 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/U3DParHgSMc", length: 90)
+exercise4.save
+
+exercise5 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/U3DParHgSMc", length: 90)
+exercise5.save
+
+exercise6 = Exercise.new(category: "upper back", video_url: "https://www.youtube.com/embed/U3DParHgSMc", length: 90)
+exercise6.save
+
 program_exercise = ProgramExercise.new(exercise: exercise1, program: program1)
 program_exercise.save
 

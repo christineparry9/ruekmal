@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-    <div id="wrapper">
-      <div id="sidebar-wrapper">
-        <%= render "shared/navbar" %>
-      </div>
+    <div class="wrapper">
+        <!--Top menu -->
+
+              <div class="sidebar">
+
+                <ul class="navlist">
+                  <li>
+                  <h4>BUDDY</h4>
+                  </li>
+                  <li class="navlistitem">
+                  <% if user_signed_in? %>
+                     <%= link_to user_path(current_user) do   %>
+                       <%= image_tag "home icon.png", alt: "home icon", width: 50 %>
+                      <% end %>
+                    <% end %>
+                  </li>
+                  <li class="navlistitem">
+                    <%= link_to articles_path do   %>
+                      <%= image_tag "knowledge.png", alt: "knowledge icon", width: 50 %>
+                    <% end %>
+                  </li>
+                  <li class="navlistitem">
+                    <%= link_to exercises_path do   %>
+                      <%= image_tag "exercise.png", alt: "exercise icon", width: 50 %>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+
+
     </div>
-    <div class="application-container">
-      <%= render "shared/flashes" %>
-      <%= yield %>
-    </div>
+
+
+    <%= render "shared/flashes" %>
+
+
+    <%= yield %>
   </body>
+  <script>
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+    </script>
 </html>
