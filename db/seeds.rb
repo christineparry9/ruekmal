@@ -11,6 +11,9 @@ User.destroy_all
 ProgramExercise.destroy_all
 Article.destroy_all
 Exercise.destroy_all
+Answer.destroy_all
+Question.destroy_all
+
 
 workplace = Workplace.new(name: "Microsoft")
 workplace.save
@@ -63,9 +66,15 @@ end
   )
   answer = Answer.new(
     content: Faker::Movie.title,
-    correct: [true, false].sample
+    correct: true
+  )
+  answer_two = Answer.new(
+    content: Faker::Movie.title,
+    correct: false
   )
  question.save!
   answer.question = question
  answer.save!
+ answer_two.question = question
+ answer_two.save!
 end

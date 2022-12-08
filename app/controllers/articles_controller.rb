@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @question = Question.all.sample
+    @answers = @question.answers
+    raise
   end
 
   def show
