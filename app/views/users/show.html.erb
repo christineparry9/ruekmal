@@ -6,6 +6,7 @@
       <p>Company - <%= @user.workplace.name %></p>
         <div class="programcard">
           <p>Current program:<strong> <%= @user.program.name %> </strong></p>
+          <p>Total points:<strong id="totalpoints"> <%= @user.number_of_points %> </strong></p>
           <p>Daily goal:<strong id="goal"> <%= @user.program.standing_goal.to_i %> minutes</strong></p>
         </div>
         <br>
@@ -18,8 +19,6 @@
         <div>
           <span id="hour">00h</span>:<span id="minute">00m</span>:<span id="second">00s</span>
         </div>
-
-
 
         <button class="counterbutton" type="button" name="stand">stand</button>
         <button class="counterbutton" type="button" name="pause">pause</button>
@@ -48,8 +47,8 @@
 <script>
 
 
-let hour = 0;
-let minute = 0;
+let hour = 4;
+let minute = 45;
 let second = 0;
 let millisecond = 0;
 
@@ -62,15 +61,27 @@ document.form_main.finish.onclick = () => finish();
 
 function finish() {
   pause();
-  console.log(document.getElementById('hour').innerText +
-  document.getElementById('minute').innerText +
-  document.getElementById('second').innerText)
+  let h = document.getElementById('hour').innerText * 60;
+  let m = document.getElementById('minute').innerText;
+
+  let t = Number(h) + Number(m);
+  console.log(t)
+
 
  let goal = document.getElementById("goal").innerText
- const time = goal.match(/\d+/)
- console.log(time[0])
+ const time = goal.match(/\d+/)[0]
+  const goal2 = goal
+  console.log(time)
 
+  console.log(t >= time);
 
+  let total = document.getElementById('totalpoints').innerText;
+  let nt = Number(total);
+
+console.log(nt);
+  if (t >= time) {  nt += 5 };
+
+console.log(nt);
 }
 
 function stand() {
@@ -87,9 +98,9 @@ function reset() {
   minute = 0;
   second = 0;
   millisecond = 0;
-  document.getElementById('hour').innerText = '01';
-  document.getElementById('minute').innerText = '45';
-  document.getElementById('second').innerText = '12';
+  document.getElementById('hour').innerText = '00';
+  document.getElementById('minute').innerText = '00';
+  document.getElementById('second').innerText = '00';
 }
 
 function timer() {
