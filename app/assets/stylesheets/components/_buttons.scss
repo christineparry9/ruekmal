@@ -21,3 +21,42 @@
   width: 100px;
   margin: 10px auto;
 }
+
+.button-read {
+  display: block;
+  background-color:  #00193C;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  border-right: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 250px;
+  margin: 10px auto;
+}
+
+.closing-button {
+  display: block;
+  background-color: #00193C;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  border-right: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100px;
+  margin: 10px auto;
+}
+
+.top-closing {
+  display: block;
+  background-color: rgb(201, 201, 201);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  border-right: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50px;
+  margin-left: 100px;
+}

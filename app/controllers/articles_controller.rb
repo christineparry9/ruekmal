@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @question = Question.all.sample
     @answers = @question.answers
-    raise
   end
 
   def show
