@@ -10,8 +10,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <div class="wrapper">
+  <body data-controller="timer">
+
+    <div class="wrapper" >
         <!--Top menu -->
 
               <div class="sidebar">
@@ -37,6 +38,14 @@
                       <%= image_tag "exercise.png", alt: "exercise icon", width: 50 %>
                     <% end %>
                   </li>
+                  <li class="navlistitem">
+                    <%= link_to programs_path do   %>
+                      <%= image_tag "programs.png", alt: "programs icon", width: 50 %>
+                    <% end %>
+                  <br>
+                  <li>
+                    <%= button_to "logout", destroy_user_session_path, method: :delete  %>
+                  </li>
                 </ul>
               </div>
 
@@ -49,10 +58,5 @@
 
     <%= yield %>
   </body>
-  <script>
-    var hamburger = document.querySelector(".hamburger");
-    hamburger.addEventListener("click", function(){
-        document.querySelector("body").classList.toggle("active");
-    })
-    </script>
+
 </html>
