@@ -1,5 +1,5 @@
 <div class="c">
-  <div class="dash" data-controller="timer">
+  <div class="dash" >
 
     <div class="userinfo">
       <h4> Hi <%= @user.first_name %>! </h4>
@@ -33,7 +33,7 @@
           </div>
           <div>
             <ol>
-            <% @user.workplace.users.each do |user| %>
+            <% @workplace.each do |user| %>
               <li class="staffscore">
               <div><%= user.first_name %></div>  <div><%= user.number_of_points %> points</div></li>
             <% end %>

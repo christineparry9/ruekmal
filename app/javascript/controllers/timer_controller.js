@@ -53,7 +53,8 @@ export default class extends Controller {
     let goal = this.goalTarget.innerHTML
     const time = goal.match(/\d+/)[0]
     const goal2 = goal
-    let total = this.totalpointsTarget.innerHTML
+    let total = this.totalpointsTarget.lastChild.innerHTML
+
     let nt = Number(total);
       if (t >= time) {  nt += 5 };
     let formData = new FormData();
@@ -71,10 +72,10 @@ export default class extends Controller {
       this.totalpointsTarget.innerHTML = data
       }
     )
-    this.hourTarget.innerHTML = 00;
-    this.minuteTarget.innerHTML = 00;
-    this.secondTarget.innerHTML = 00;
-    this.millisecondTarget.innerHTML = 0;
+    // this.hourTarget.innerHTML = 00;
+    // this.minuteTarget.innerHTML = 00;
+    // this.secondTarget.innerHTML = 00;
+    // this.millisecondTarget.innerHTML = 0;
   }
 
 

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @workplace_users = current_user.workplace.users.all.order('user.number_of_points DESC').all
+    @workplace = User.order('number_of_points DESC')
   end
 
   def update
