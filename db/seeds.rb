@@ -57,19 +57,13 @@ exercise6.save
 program_exercise = ProgramExercise.new(exercise: exercise1, program: program1)
 program_exercise.save
 
-10.times do
-  article = Article.new(
-    title: Faker::Movie.title,
-    reading_time: rand(1..5)
-  )
-  article.save!
-end
 
 10.times do
   article = Article.new(
     title: Faker::Movie.title,
     reading_time: rand(1..5),
     category: ["for you", "lower back", "neck", "shoulder"].sample,
+    image: Faker::LoremFlickr.image,
   )
   article.save!
 end
