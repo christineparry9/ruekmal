@@ -13,8 +13,12 @@ Exercise.destroy_all
 
 workplace = Workplace.new(name: "Microsoft")
 workplace.save
-program1 = Program.new(name: "Lower back pain", standing_points_goal: 120, standing_goal: 180, program_length: 7)
-program1.save
+program1 = Program.create(name: "Lower back pain", standing_points_goal: 120, standing_goal: 180, program_length: 7)
+program2 = Program.create(name: "Upper back pain", standing_points_goal: 120, standing_goal: 180, program_length: 10)
+program3 = Program.create(name: "Neck & Shoulders", standing_points_goal: 120, standing_goal: 180, program_length: 30)
+program4 = Program.create(name: "Neck & Shoulders", standing_points_goal: 120, standing_goal: 180, program_length: 30)
+program5 = Program.create(name: "Neck & Shoulders", standing_points_goal: 120, standing_goal: 180, program_length: 30)
+program6 = Program.create(name: "Neck & Shoulders", standing_points_goal: 120, standing_goal: 180, program_length: 30)
 
 user1 = User.new(number_of_points: 30, first_name: "Christine", program: program1, workplace: workplace, email: "christine@test.com", password: "testtest", password_confirmation: "testtest")
 user1.save!

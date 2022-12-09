@@ -1,0 +1,24 @@
+<div class="c">
+  <h1>Program Overview</h1>
+
+    <div data-controller="chose-program" class="row" >
+      <% @programs.each do |program| %>
+        <div class="card d-flex col-4">
+          <img src="https://www.shape.com/thmb/VlmW0mcXXdltO--b2kea7Uwpzto=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-back-exercises-for-back-fat_1-ebc5111c7a9c4b1084793358cda7a3e3.jpg" alt="program cover" width="100px">
+          <div>
+            <div data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" title="<%= program.name %>" data-bs-content="Duration: <%= program.program_length %> days">
+              <p><strong><%= program.name %></strong></p>
+            </div>
+            <p>Duration: <%= program.program_length %> days</p>
+            <% if @user.program_id == program.id %>
+              <button type="button" class="button-quiz">Joined</button>
+            <% else %>
+              <div data-chose-program-target="program" data-action="click->chose-program#updateProgram" id="<%= program.id %>" data-user="<%= current_user.id %>">
+                <button type="button" class="button-quiz">Join</button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

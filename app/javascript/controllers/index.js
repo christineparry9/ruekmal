@@ -4,5 +4,11 @@
 
 import { application } from "./application"
 
+import ChoseProgramController from "./chose_program_controller"
+application.register("chose-program", ChoseProgramController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PopoverController from "./popover_controller"
+application.register("popover", PopoverController)
