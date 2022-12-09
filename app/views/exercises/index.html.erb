@@ -4,6 +4,7 @@
   <button class="tablinks" onclick="openCity(event, 'all')" id="defaultOpen">All</button>
   <button class="tablinks" onclick="openCity(event, 'lower')">Lower Back</button>
   <button class="tablinks" onclick="openCity(event, 'neck')">Neck</button>
+  <button class="tablinks" onclick="openCity(event, 'upper')">Upper Back</button>
 </div>
 
 <!-- Tab content -->
@@ -25,7 +26,7 @@
 
 <div id="lower" class="tabcontent">
     <div class="videocard">
-      <% @exercises.each do |exercise| %>
+      <% @lower.each do |exercise| %>
         <div class="eachvideo">
           <div class="iframe">
             <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
@@ -41,7 +42,22 @@
 
 <div id="neck" class="tabcontent">
     <div class="videocard">
-      <% @exercises.each do |exercise| %>
+      <% @neck.each do |exercise| %>
+        <div class="eachvideo">
+          <div class="iframe">
+            <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+         </div>
+         <div>
+          <p> length: <%= exercise.length %>  minutes</p>
+          <p> <%= exercise.category %> </p>
+         </div>
+        </div>
+      <% end %>
+    </div>
+</div>
+<div id="upper" class="tabcontent">
+    <div class="videocard">
+      <% @upper.each do |exercise| %>
         <div class="eachvideo">
           <div class="iframe">
             <iframe width="250" height="135" src=<%= exercise.video_url %> title="4 BEST LOWER BACK STRETCHES FOR PAIN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>

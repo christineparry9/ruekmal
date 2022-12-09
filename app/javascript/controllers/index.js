@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import PopoverController from "./popover_controller"
 application.register("popover", PopoverController)
+
+import TimerController from "./timer_controller"
+application.register("timer", TimerController)
