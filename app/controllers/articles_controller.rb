@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @question = Question.all.sample
+    @answers = @question.answers
   end
 
   def show
@@ -12,4 +13,6 @@ private
   def article_params
     params.require(:article).permit(:id, :title)
   end
+
+
 end

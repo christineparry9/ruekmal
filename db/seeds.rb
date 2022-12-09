@@ -8,11 +8,13 @@
 
 require 'faker'
 User.destroy_all
+ProgramExercise.destroy_all
 Article.destroy_all
 ProgramExercise.destroy_all
 Exercise.destroy_all
 Answer.destroy_all
 Question.destroy_all
+
 
 workplace = Workplace.new(name: "Microsoft")
 workplace.save
@@ -67,7 +69,6 @@ program_exercise.save
     title: Faker::Movie.title,
     reading_time: rand(1..5),
     category: ["for you", "lower back", "neck", "shoulder"].sample,
-    image: Faker::LoremFlickr.image,
   )
   article.save!
 end

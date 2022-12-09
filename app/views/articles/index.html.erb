@@ -1,8 +1,12 @@
 <div class="c">
   <h1>Do you know...? Test your knowledge!</h1>
-  <div class="quiz-card">
+  <div
+    class="quiz-card" data-controller="answer-compare"
+    data-answer-compare-question-value="<%= @question.id%>"
+    data-answer-compare-answer-value=""
+  >
     <div>
-      <% <p>question : <%= @question.content %> %>
+      <p>question : <%= @question.content %></p>
     </div>
     <div class="quiz-card-answers">
       <div class="form-check">
@@ -17,26 +21,78 @@
           No, It cannot have an impact.
         </label>
       </div>
-        <button type="button" class="button-quiz">Submit</button>
+      <button type="button" class="button-quiz"
+        <%# data-container="body" %>
+        data-bs-toggle="popover"
+        data-bs-placement="left"
+        data-bs-content="Congratulations! You gave the right answer! Indeed it can increase back pain by a domino effect."
+      >
+        Submit
+      </button>
     </div>
   </div>
-  <div class="category-card">
-    <div><p>For you</p></div>
-    <div><p>Cat 2</p></div>
-    <div><p>Cat 3</p></div>
-    <div><p>Cat 4</p></div>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'for you')" id="defaultOpen">For you</button>
+    <button class="tablinks" onclick="openCity(event, 'lower back')">Lower Back</button>
+    <button class="tablinks" onclick="openCity(event, 'neck')">Neck</button>
+    <button class="tablinks" onclick="openCity(event, 'shoulder')">Shoulder</button>
   </div>
-  <div class="grid-container">
-    <div class="container">
-      <div class="row">
+
+  <div id="for you" class="tabcontent">
+    <div class="grid-container">
+      <% @articles.each do |article| %>
+        <%= render "article", article: article %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="lower back" class="tabcontent">
+    <div class="grid-container">
         <% @articles.each do |article| %>
-            <div class="col-4 article-card"><img src= <%= article.image %> alt="back pain">
-              <div class=card-title><%= link_to article.title, article_path(article) %></div>
-              <div class="card-body"> read more about back pain and learn how to choose the right exercice for you. Start having good habits</div>
-            </div>            <%#= link_to article.title, "/articles/show/#{@article.id}" %>
-            <%#= article.title %>
-          <% end %>
-      </div>
+          <%= render "article", article: article %>
+        <% end %>
     </div>
   </div>
+
+  <div id="neck" class="tabcontent">
+    <div class="grid-container">
+      <% @articles.each do |article| %>
+        <%= render "article", article: article %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="shoulder" class="tabcontent">
+    <div class="grid-container">
+      <% @articles.each do |article| %>
+        <%= render "article", article: article %>
+      <% end %>
+    </div>
+  </div>
+
 </div>
+<script>
+
+document.getElementById("defaultOpen").click();
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>

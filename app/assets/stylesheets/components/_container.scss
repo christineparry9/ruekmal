@@ -2,7 +2,8 @@
   margin: auto;
   margin-left: 250px;
   margin-top: 50px;
-  width: 900px
+  width: 900px;
+  color: #00193C;;
 }
 
 .videocard{
@@ -42,4 +43,11 @@
   padding: 10px;
   border-color: $ruekmallightgreen;
   border-style: solid;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 1000px;
 }
