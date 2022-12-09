@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
   resources :questions, only: [:index, :show]
   resources :answers, only: [:index, :show]
+  resources :programs, only: [:index]
 end
