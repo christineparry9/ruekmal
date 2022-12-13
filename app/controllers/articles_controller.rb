@@ -1,6 +1,11 @@
 class ArticlesController < ApplicationController
     def index
       @articles = Article.all
+      @articles_for_you = Article.where(category: "for you")
+      @articles_lower_back = Article.where(category: "lower back")
+      @articles_neck = Article.where(category: "neck")
+      @articles_shoulder = Article.where(category:"shoulder")
+
       @question = Question.all.sample
       @answers = @question.answers
       @answer_one = @question.answers[0]

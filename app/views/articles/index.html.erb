@@ -28,20 +28,6 @@
       <%= render 'popover', feedback: @feedback %>
     </div>
   </div>
-  <%# <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">For you</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Lower Back</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Neck</a>
-  </li>
- <li class="nav-item">
-    <a class="nav-link" href="#">Shoulder</a>
-  </li>
-</ul> %>
   <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'for you')" id="defaultOpen">For you</button>
     <button class="tablinks" onclick="openCity(event, 'lower back')">Lower Back</button>
@@ -51,7 +37,7 @@
 
   <div id="for you" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_for_you.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>
@@ -59,7 +45,7 @@
 
   <div id="lower back" class="tabcontent">
     <div class="grid-container">
-        <% @articles.each do |article| %>
+        <% @articles_lower_back.each do |article| %>
           <%= render "article", article: article %>
         <% end %>
     </div>
@@ -67,7 +53,7 @@
 
   <div id="neck" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_neck.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>
@@ -75,7 +61,7 @@
 
   <div id="shoulder" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_shoulder.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>
