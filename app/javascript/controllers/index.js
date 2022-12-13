@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AnswerCompareController from "./answer_compare_controller"
+application.register("answer-compare", AnswerCompareController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

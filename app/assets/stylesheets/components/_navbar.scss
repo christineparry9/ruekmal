@@ -3,11 +3,20 @@
 }
 
 .navlistitem{
-  margin-top: 50px
+  margin-top: 50px;
+}
+
+.navlistitem .fa-solid {
+  color: white;
+  font-size: 24px;
+}
+
+.navlistitem :hover {
+  color: $ruekmaldarkblue;
 }
 
 .wrapper .sidebar{
-  background: #FFEBCB;
+  background: $ruekmaldarkblue;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +38,7 @@
 
 .wrapper .sidebar ul li a:hover,
 .wrapper .sidebar ul li a.active{
-    background: $ruekmaldarkblue;
+    background: #B1EA9A;
     border-top-left-radius: 70px 70px;
     border-bottom-left-radius: 70px 70px;
 }
