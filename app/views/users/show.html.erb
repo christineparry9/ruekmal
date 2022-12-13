@@ -1,9 +1,12 @@
-<div class="c">
+<div class="c3">
+<div class="c2">
   <div class="dash" >
 
     <div class="userinfo">
+    <div>
       <h4> Hi <%= @user.first_name %>! </h4>
       <p>Company - <%= @user.workplace.name %></p>
+      </div>
         <div class="programcard">
           <p>Current program:<strong> <%= @user.program.name %> </strong></p>
               <%= render "total_points" %>
@@ -32,7 +35,7 @@
           </div>
         </div>
 
-
+</div>
 
 
 </div>
