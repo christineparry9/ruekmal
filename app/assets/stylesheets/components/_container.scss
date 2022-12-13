@@ -1,29 +1,25 @@
 .c{
   margin: auto;
-  margin-left: 150px;
+  margin-left: 250px;
   margin-top: 50px;
-  width: 900px;
+  width: 1000px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
 
 }
-.c3{
-  margin: auto;
-  margin-left: 25px;
-  margin-top: 50px;
-  width: 800px;
-  color: #00193C;
-  background-color: rgb(255, 255, 255);
-  display:flex;
-  justify-content: center;
 
-}
 
 .c2{
   background-color: white;
   width: 100%;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.03);
+
+}
+
+#user{
+  display:flex;
+  justify-content: space-between;
 }
 
 .videocard{
@@ -97,7 +93,7 @@
 
 .userinfo {
   display:flex;
-  justify-content: space-between;
+
 }
 
 .userinfo h4, p {
