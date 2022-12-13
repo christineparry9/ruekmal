@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruekmal</title>
+    <title>Rueckmal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -19,32 +19,34 @@
 
                 <ul class="navlist">
                   <li>
-                  <h4>BUDDY</h4>
+                    <%= image_tag "rueckmal-logo.png", alt: "logo", width: 100 %>
                   </li>
                   <li class="navlistitem">
                   <% if user_signed_in? %>
                      <%= link_to user_path(current_user) do   %>
-                       <%= image_tag "home icon.png", alt: "home icon", width: 50 %>
+                       <i class="fa-solid fa-house"></i>
                       <% end %>
                     <% end %>
                   </li>
                   <li class="navlistitem">
                     <%= link_to articles_path do   %>
-                      <%= image_tag "knowledge.png", alt: "knowledge icon", width: 50 %>
+                      <i class="fa-solid fa-lightbulb"></i>
                     <% end %>
                   </li>
                   <li class="navlistitem">
                     <%= link_to exercises_path do   %>
-                      <%= image_tag "exercise.png", alt: "exercise icon", width: 50 %>
+                      <i class="fa-solid fa-person-walking"></i>
                     <% end %>
                   </li>
                   <li class="navlistitem">
                     <%= link_to programs_path do   %>
-                      <%= image_tag "programs.png", alt: "programs icon", width: 50 %>
+                      <i class="fa-solid fa-chalkboard-user"></i>
                     <% end %>
                   <br>
-                  <li>
-                    <%= button_to "logout", destroy_user_session_path, method: :delete  %>
+                  <li class="navlistitem">
+                    <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do  %>
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                    <% end %>
                   </li>
                 </ul>
               </div>

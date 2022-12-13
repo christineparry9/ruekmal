@@ -55,3 +55,21 @@
 .card-title {
   color: #00193C;
 }
+
+.program-card{
+  background-color: white;
+  padding: 15px;
+  border-bottom: 0.5px solid #ddd;
+  margin: 10px;
+}
+
+.program-content {
+  margin: 10px;
+  width: 220px;
+}
+
+.program-image {
+  object-fit: cover;
+  height: 15vh;
+  width: 100%;
+}

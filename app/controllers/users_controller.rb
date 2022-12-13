@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.update(user_params)
     respond_to do |format|
-      format.html # Follow regular flow of Rails
+      format.html {redirect_to programs_path} # Follow regular flow of Rails
       format.text { render partial: "users/total_points", locals: { user: @user }, formats: [:html] }
     end
   end
@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:number_of_points)
+    puts params
+    params.require(:user).permit(:number_of_points, :program_id)
   end
 
   # def update
