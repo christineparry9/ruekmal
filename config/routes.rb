@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :show]
   resources :answers, only: [:index, :show]
   resources :programs, only: [:index]
+  post '/articles/check_answer', to: 'articles#check_answer', as: 'check_answer'
 end

@@ -63,6 +63,41 @@ exercise6.save
 program_exercise = ProgramExercise.new(exercise: exercise1, program: program1)
 program_exercise.save
 
+#creating some questions/answers for the knowledge page
+
+question1 = Question.new(content: "What position is best for your back when you sleep? On the back or on one side with the knees flexed toward the chest?")
+question1.save!
+question2 = Question.new(content: "Which of these sports can cause dangerous back injuries? Swimming or volleyball?")
+question2.save!
+question3 = Question.new(content: "Disks cushion vertebrae in the back. They are made of bones or cartilage?")
+question3.save!
+# question5 = Question.new(content: "Which of these is a significant risk factor for backache? Being overweight or beeing short?")
+# question5.save!
+# question6 = Question.new(content: "Which of these measures will help a backache? Several days of bed rest or massage and ice?")
+# question6.save!
+# question7 = Question.new(content: "How should you lift a heavy object? Bend from the waist or squat, then lift" )
+# question7.save!
+# question8 = Question.new(content: "What are the warning signs of a herniated disk? Shooting back pain when you cough, with numbness and lower back pain or shouder pain? ")
+# question8.save!
+
+
+
+
+answer1 = Answer.new(content: "On one side with the knees flexed toward the chest", question: question1, correct: true)
+answer1.save!
+answer2 = Answer.new(content: "On the back with only one pillow behind the head and another one under the knees", question: question1, correct: false)
+answer2.save!
+answer3 = Answer.new(content: "swimming, because it seeks to many muscles at the same time", question: question2, correct: false )
+answer3.save!
+answer4 = Answer.new(content: "Volleyball as it can gives several repeated traumas", question: question2, correct: true)
+answer4.save!
+answer5 = Answer.new(content: "Cartilage.Ligaments encase the disk", question: question3, correct: true )
+answer5.save!
+answer6 = Answer.new(content: "Bones. ligaments and cartilage encase the disk", question: question3, correct: false)
+answer6.save!
+
+article1 = Article.new
+
 
 10.times do
   article = Article.new(
@@ -71,22 +106,4 @@ program_exercise.save
     category: ["for you", "lower back", "neck", "shoulder"].sample,
   )
   article.save!
-end
-10.times do
-  question = Question.new(
-    content: Faker::Movie.title,
-  )
-  answer = Answer.new(
-    content: Faker::Movie.title,
-    correct: true
-  )
-  answer_two = Answer.new(
-    content: Faker::Movie.title,
-    correct: false
-  )
- question.save!
-  answer.question = question
- answer.save!
- answer_two.question = question
- answer_two.save!
 end

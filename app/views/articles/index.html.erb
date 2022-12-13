@@ -3,34 +3,45 @@
   <div
     class="quiz-card" data-controller="answer-compare"
     data-answer-compare-question-value="<%= @question.id%>"
-    data-answer-compare-answer-value=""
   >
     <div>
-      <p>question : <%= @question.content %></p>
+      <p><%= @question.content %></p>
     </div>
-    <div class="quiz-card-answers">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" value="yes" name="answer" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Yes, that can have an impact.
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" value="no" name="answer" id="defaultCheck2">
-        <label class="form-check-label" for="defaultCheck2">
-          No, It cannot have an impact.
-        </label>
-      </div>
-      <button type="button" class="button-quiz"
-        <%# data-container="body" %>
-        data-bs-toggle="popover"
-        data-bs-placement="left"
-        data-bs-content="Congratulations! You gave the right answer! Indeed it can increase back pain by a domino effect."
-      >
-        Submit
-      </button>
+    <div
+      class="answer_container"
+      data-answer-compare-target="popover"
+    >
+      <%= form_with(url: check_answer_path,
+        method: :post,
+        html: {data: {answer_compare_target: "form", action: "submit->answer-compare#send"}},
+        class: "quiz-card-answers") do |f| %>
+        <%= f.collection_check_boxes :answer_id, @answers, :id, :content do |b| %>
+          <%= b.label do %>
+            <%= b.check_box data: { answer_compare_target: 'checkbox', action:"click->answer-compare#checkbox" } %>
+            <%= b.text %>
+          <% end %>
+        <% end %>
+        <div class="submit-button">
+          <%= f.button 'submit', class: 'button-quiz' %>
+        </div>
+      <% end %>
+      <%= render 'popover', feedback: @feedback %>
     </div>
   </div>
+  <%# <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">For you</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Lower Back</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Neck</a>
+  </li>
+ <li class="nav-item">
+    <a class="nav-link" href="#">Shoulder</a>
+  </li>
+</ul> %>
   <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'for you')" id="defaultOpen">For you</button>
     <button class="tablinks" onclick="openCity(event, 'lower back')">Lower Back</button>
