@@ -59,14 +59,14 @@
   background-color: $ruekmaldarkblue;
   border-radius: 5px;
   padding: 10px;
-  border-style: solid 1px;
+  border: $ruekmaldarkblue solid 1px;
 }
 .counterbutton:hover{
   color: $ruekmaldarkblue;
   background-color: $ruekmallightgreen;
   border-radius: 5px;
   padding: 10px;
-  border-style: solid;
+  border: $ruekmallightgreen solid 1px;
 }
 .grid-container {
   display: flex;
