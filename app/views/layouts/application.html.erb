@@ -13,25 +13,7 @@
   <body data-controller="timer">
 
     <div class="wrapper" >
-    <div class="n ">
-        <nav class="navbar navbar-expand-lg navbar-light">
-
-          <div class="counter">
-
-            <form name="form_main">
-              <div class="digits">
-                <span id="hour" class="timerdigits" data-timer-target="hour">00h</span>:<span id="minute"  class="timerdigits" data-timer-target="minute">00m</span>:<span id="second"  class="timerdigits" data-timer-target="second">00s</span>
-              </div>
-
-              <button data-timer-target="stand" data-action="click->timer#stand" class="counterbutton" type="button" name="stand">stand</button>
-              <button data-timer-target="pause" data-action="click->timer#pause" class="counterbutton" type="button"name="pause">pause</button>
-              <button data-timer-target="finish" data-action="click->timer#reset" class="counterbutton" type="button" name="reset">finish session</button>
-            </form>
-          </div>
-        </nav>
-      </div>
         <!--Top menu -->
-
 
               <div class="sidebar">
 
@@ -71,100 +53,12 @@
 
 
     </div>
-      <div class="c">
-          <%= render "users/timer" %>
-          <%= render "shared/flashes" %>
-      </div>
+
+
+    <%= render "shared/flashes" %>
+
 
     <%= yield %>
-
-<%# <script>
-window.addEventListener("load", () => {
-console.log("test")
-let hour = 05 ;
-  let minute = 00 ;
-  let second = 0 ;
-  let millisecond = 0;
-
-  let cron;
-
-  document.form_main.stand.onclick = () => stand();
-  document.form_main.pause.onclick = () => pause();
-  document.form_main.reset.onclick = () => reset();
-
-  function stand() {
-    pause();
-    cron = setInterval(() => { timer(); }, 10);
-    console.log(document.URL)
-  }
-
-  function pause() {
-    clearInterval(cron);
-    console.log()
-  }
-
-  function reset() {
-    clearInterval(cron);
-
-
-      let h = document.getElementById('hour').innerText * 60;
-      let m = document.getElementById('minute').innerText;
-      let t = Number(h) + Number(m);
-      let goal = document.getElementById('goal').innerHTML
-      const time = goal.match(/\d+/)[0]
-      const goal2 = goal
-      let total = document.getElementById('totalpoints').lastChild.innerHTML
-
-      let nt = Number(total);
-        if (t >= time) {  nt += 5 };
-      let formData = new FormData();
-      formData.append("user[number_of_points]", nt)
-      const token = document.querySelector('meta[name="csrf-token"]').content
-      const spliturl = document.URL.split("/")
-      const url = "/users/" + spliturl[spliturl.length-1]
-      fetch(url,  {
-      method: "PATCH",
-      headers: { "Accept": "text/plain", "X-CSRF-Token" : token },
-      body: formData
-      })
-      .then(response => response.text())
-      .then((data) => {
-        document.getElementById('totalpoints').innerHTML = data
-        }
-      )
-  }
-
-  function timer() {
-    if ((millisecond += 10) == 1000) {
-      millisecond = 0;
-      second++;
-    }
-    if (second == 60) {
-      second = 0;
-      minute++;
-    }
-    if (minute == 60) {
-      minute = 0;
-      hour++;
-    }
-    if(document.URL = "/users/1") {document.getElementById('hour').innerText = returnData(hour)};
-    if(document.URL = "/users/1") {document.getElementById('minute').innerText = returnData(minute)};
-    if(document.URL = "/users/1") {document.getElementById('second').innerText = returnData(second)};
-  }
-
-  function returnData(input) {
-    return input > 10 ? input : `0${input}`
-  }
-
-
-  // let currentMillisecondsPassed=new Date().getTime()-start;
-
-})
-// let start=new Date().getTime();
-
-</script> %>
-
-
   </body>
 
 </html>
