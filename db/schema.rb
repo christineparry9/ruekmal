@@ -36,7 +36,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_110128) do
     t.text "paragraph3"
     t.text "paragraph4"
     t.text "paragraph5"
-    t.string "subtitle"
     t.string "h1"
     t.string "h2"
     t.string "h3"
