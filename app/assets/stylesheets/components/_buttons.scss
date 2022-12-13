@@ -60,3 +60,25 @@
   width: 50px;
   margin-left: 100px;
 }
+
+.button-program {
+  display: block;
+  background-color: transparent;
+  border: 1px solid #B1EA9A;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+.button-program-chosen {
+  display: block;
+  background-color: #B1EA9A;
+  border: 1px solid #B1EA9A;
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+.button-program:hover {
+  background-color: #B1EA9A;
+}
