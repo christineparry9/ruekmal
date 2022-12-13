@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_110128) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.text "paragraph1"
     t.text "paragraph2"
     t.text "paragraph3"

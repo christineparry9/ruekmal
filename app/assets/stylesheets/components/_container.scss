@@ -2,9 +2,27 @@
   margin: auto;
   margin-left: 150px;
   margin-top: 50px;
-  width: 900px;
+  width: 1200px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
+
+}
+.c3{
+  margin: auto;
+  margin-left: 150px;
+  margin-top: 50px;
+  width: 1200px;
+  color: #00193C;
+  background-color: rgb(255, 255, 255);
+  display:flex;
+  justify-content: center;
+
+}
+
+.c2{
+  background-color: #00193C;
+  width: 800px;
+  justify-content: center;
 }
 
 .videocard{
@@ -18,7 +36,7 @@
   height: 250px;
   margin:10px;
   background-color: $ruekmaldarkblue;
-  border-radius: 20px;
+  border-radius: 5px;
   color: white;
   padding-left:10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,14 +52,12 @@
 }
 
 .counter{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 1200px;
   padding: 20px;
-  border: solid;
+  // border: solid;
   border-radius: 5px;
-  align-items: center;
-
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.03);
 }
 
 .counterbutton{
@@ -49,7 +65,7 @@
   background-color: $ruekmaldarkblue;
   border-radius: 5px;
   padding: 10px;
-  border-style: solid;
+  border-style: solid 1px;
 }
 .counterbutton:hover{
   color: $ruekmaldarkblue;
@@ -66,10 +82,21 @@
 }
 
 .timerdigits{
-  font-size: 30px;
-  padding-left: 15px
+  font-size: 50px;
+  padding-left: 5px;
+  margin-bottom: 18px;
 }
 
 .digits{
-  margin-bottom: 18px;
+  padding:15px;
+  display:flex;
+  justify-content: space-between
+}
+
+#finish{
+  margin-top: 10px;
+}
+
+.userinfo {
+  display:flex;
 }
