@@ -5,7 +5,7 @@ export default class extends Controller {
 
   connect() {
 
-    if (true || !localStorage.getItem("isOn")) {
+    if (!localStorage.getItem("isOn")) {
       localStorage.setItem("isOn", false)
       localStorage.setItem("hour", 4)
       localStorage.setItem("minute", 0)
@@ -89,7 +89,7 @@ export default class extends Controller {
     })
     .then(response => response.text())
     .then((data) => {
-      if (document.URL == url) {this.totalpointsTarget.innerHTML = data}
+      if (document.URL.match(url)) {this.totalpointsTarget.innerHTML = data}
       this.hourTarget.innerHTML = "00";
       this.minuteTarget.innerHTML = "00";
       this.secondTarget.innerHTML = "00";
