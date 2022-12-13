@@ -19,14 +19,14 @@
       <div class="n ">
           <div class="counter">
             <form name="form_main" class="digits">
+              <div class="standpause">
+              <button data-timer-target="stand" data-action="click->timer#stand" class="counterbutton" type="button" name="stand" style="width: 62px"><i class="fa-solid fa-person"></i></button>
+              <button data-timer-target="pause" data-action="click->timer#pause" class="counterbutton" type="button"name="pause" style="width: 62px"><i class="fa-solid fa-chair"></i></button>
+
+              <button id="finish"data-timer-target="finish" data-action="click->timer#reset" class="counterbutton" type="button" name="reset">Finish</button>
+              </div>
               <div >
                 <h1><span style="font-family: 'Orbitron', sans-serif;" id="hour" class="timerdigits" data-timer-target="hour"style="font-family: 'Orbitron', sans-serif;" >00h</span>:<span id="minute" style="font-family: 'Orbitron', sans-serif;"  class="timerdigits" data-timer-target="minute">00m</span>:<span id="second"  class="timerdigits"style="font-family: 'Orbitron', sans-serif;"  data-timer-target="second">00s</span></h1>
-              </div>
-              <div class="standpause">
-              <button data-timer-target="stand" data-action="click->timer#stand" class="counterbutton" type="button" name="stand"><i class="fa-solid fa-person"></i></button>
-              <button data-timer-target="pause" data-action="click->timer#pause" class="counterbutton" type="button"name="pause"><i class="fa-solid fa-pause"></i></button>
-
-              <button id="finish"data-timer-target="finish" data-action="click->timer#reset" class="counterbutton" type="button" name="reset">finish session</button>
               </div>
             </form>
           </div>
@@ -56,12 +56,12 @@
                   </li>
                   <li class="navlistitem">
                     <%= link_to exercises_path do   %>
-                      <i class="fa-solid fa-person-walking"></i>
+                      <i class="fa-solid fa-dumbbell"></i>
                     <% end %>
                   </li>
                   <li class="navlistitem">
                     <%= link_to programs_path do   %>
-                      <i class="fa-solid fa-chalkboard-user"></i>
+                      <i class="fa-solid fa-clipboard-list"></i>
                     <% end %>
                   <br>
                   <li class="navlistitem">

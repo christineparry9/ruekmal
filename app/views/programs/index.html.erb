@@ -10,7 +10,7 @@
 
               <p><strong><%= program.name %></strong></p>
 
-            <p>Duration: <%= program.program_length %> days</p>
+            <p><i class="fa-solid fa-hourglass-half"></i> &nbsp; <%= program.program_length %> days</p>
             <% if @user.program_id == program.id %>
               <button type="button" class="button-program-chosen">Joined</button>
             <% else %>
