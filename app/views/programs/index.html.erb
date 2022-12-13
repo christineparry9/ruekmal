@@ -1,27 +1,29 @@
 <div class="c">
-  <div style="margin-left: 25px;"><h4>Program Overview</h4></div>
+<div class="c2">
+  <div><h4>Program Overview</h4></div>
 
-    <div data-controller="chose-program" class="videocard" >
+    <div class="videocard" >
       <% @programs.each do |program| %>
         <div class="program-card d-flex align-items-center">
           <img src="https://www.shape.com/thmb/VlmW0mcXXdltO--b2kea7Uwpzto=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-back-exercises-for-back-fat_1-ebc5111c7a9c4b1084793358cda7a3e3.jpg" class="program-image" alt="program cover">
           <div class="program-content">
-            <div data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" title="<%= program.name %>" data-bs-content="Duration: <%= program.program_length %> days">
+
               <p><strong><%= program.name %></strong></p>
-            </div>
+
             <p>Duration: <%= program.program_length %> days</p>
             <% if @user.program_id == program.id %>
               <button type="button" class="button-program-chosen">Joined</button>
             <% else %>
-            <div>
+
               <%= simple_form_for(@user, data: {turbo: false}) do |f| %>
                 <%= f.hidden_field :program_id, value: program.id %>
                 <%= f.button :submit, "Join", class:"button-program" %>
               <% end %>
-            </div>
+
             <% end %>
           </div>
         </div>
       <% end %>
+    </div>
     </div>
 </div>

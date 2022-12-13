@@ -2,16 +2,16 @@
   margin: auto;
   margin-left: 150px;
   margin-top: 50px;
-  width: 1200px;
+  width: 900px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
 
 }
 .c3{
   margin: auto;
-  margin-left: 150px;
+  margin-left: 25px;
   margin-top: 50px;
-  width: 1200px;
+  width: 800px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
   display:flex;
@@ -20,14 +20,16 @@
 }
 
 .c2{
-  background-color: #00193C;
-  width: 800px;
-  justify-content: center;
+  background-color: white;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.03);
 }
 
 .videocard{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
 }
 .eachvideo{
@@ -46,13 +48,9 @@
   width:  350px;
 }
 
-.dash{
-  display: flex;
-  justify-content: space-between
-}
 
 .counter{
-  width: 1200px;
+  width: 100%;
   padding: 20px;
   // border: solid;
   border-radius: 5px;
@@ -99,4 +97,10 @@
 
 .userinfo {
   display:flex;
+  justify-content: space-between;
+}
+
+.userinfo h4, p {
+  color: black;
+  padding-left: 30px;
 }
