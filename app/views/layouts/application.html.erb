@@ -16,11 +16,11 @@
         <!--Top menu -->
 
               <div class="sidebar">
-
-                <ul class="navlist">
-                  <li>
-                    <%= image_tag "rueckmal-logo.png", alt: "logo", width: 100 %>
-                  </li>
+                <div class="d-flex flex-column justify-content-center" style="display: flex; align-items: center;">
+                 <%= image_tag "rueckmal-logo.png", alt: "logo" %>
+                </div>
+                <ul class="navlist" style="display: flex; align-items: center; flex-direction: column;">
+                <div class="d-flex flex-column justify-content-center">
                   <li class="navlistitem">
                   <% if user_signed_in? %>
                      <%= link_to user_path(current_user) do   %>
@@ -48,6 +48,7 @@
                       <i class="fa-solid fa-right-from-bracket"></i>
                     <% end %>
                   </li>
+                  </div>
                 </ul>
               </div>
 
