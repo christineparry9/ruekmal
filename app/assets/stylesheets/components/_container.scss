@@ -34,21 +34,42 @@
 }
 
 .counter{
-  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: solid;
+  border-radius: 5px;
+  align-items: center;
+
 }
 
 .counterbutton{
   color: white;
   background-color: $ruekmaldarkblue;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
-  border-color: $ruekmallightgreen;
   border-style: solid;
 }
-
+.counterbutton:hover{
+  color: $ruekmaldarkblue;
+  background-color: $ruekmallightgreen;
+  border-radius: 5px;
+  padding: 10px;
+  border-style: solid;
+}
 .grid-container {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   width: 1000px;
+}
+
+.timerdigits{
+  font-size: 30px;
+  padding-left: 15px
+}
+
+.digits{
+  margin-bottom: 18px;
 }
