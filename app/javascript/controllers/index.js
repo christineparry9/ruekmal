@@ -4,6 +4,12 @@
 
 import { application } from "./application"
 
+import AnswerCompareController from "./answer_compare_controller"
+application.register("answer-compare", AnswerCompareController)
+
+import ChoseProgramController from "./chose_program_controller"
+application.register("chose-program", ChoseProgramController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
