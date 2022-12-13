@@ -7,9 +7,9 @@
         <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
          <p>- <%= @user.workplace.name %></p>
        </div>
-          <p>Current program:<strong> <%= @user.program.name %> </strong></p>
+          <p><i class="fa-solid fa-clipboard-list"></i> &nbsp; <%= @user.program.name %> </p>
               <%= render "total_points" %>
-          <p>Daily goal:<strong data-timer-target="goal" id="goal"> <%= @user.program.standing_goal.to_i %> minutes</strong></p>
+          <p><i class="fa-solid fa-flag-checkered"></i><strong data-timer-target="goal" id="goal"> &nbsp; <%= @user.program.standing_goal.to_i %></strong> minutes</p>
         </div>
           <br>
       </div>
