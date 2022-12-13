@@ -51,7 +51,7 @@
 
   <div id="for you" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_for_you.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>
@@ -59,7 +59,7 @@
 
   <div id="lower back" class="tabcontent">
     <div class="grid-container">
-        <% @articles.each do |article| %>
+        <% @articles_lower_back.each do |article| %>
           <%= render "article", article: article %>
         <% end %>
     </div>
@@ -67,7 +67,7 @@
 
   <div id="neck" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_neck.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>
@@ -75,7 +75,7 @@
 
   <div id="shoulder" class="tabcontent">
     <div class="grid-container">
-      <% @articles.each do |article| %>
+      <% @articles_shoulder.each do |article| %>
         <%= render "article", article: article %>
       <% end %>
     </div>

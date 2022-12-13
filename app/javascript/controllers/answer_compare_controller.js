@@ -10,7 +10,7 @@ export default class extends Controller {
       element.remove();
     });
     for (const p of this.formTarget) {
-      console.log(event.srcElement)
+      // console.log(event.srcElement)
       if (p.id != event.srcElement.id) {
         p.checked = false;
       }

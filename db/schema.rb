@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_110128) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
     t.datetime "updated_at", null: false
     t.text "paragraph1"
     t.text "paragraph2"
+    t.text "paragraph3"
+    t.text "paragraph4"
+    t.text "paragraph5"
+    t.string "subtitle"
+    t.string "h1"
+    t.string "h2"
+    t.string "h3"
+    t.string "h4"
+    t.string "h5"
+    t.text "soustitre"
   end
 
   create_table "challenges", force: :cascade do |t|

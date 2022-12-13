@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-require 'faker'
 User.destroy_all
 ProgramExercise.destroy_all
 Article.destroy_all
@@ -87,7 +86,7 @@ answer1 = Answer.new(content: "On one side with the knees flexed toward the ches
 answer1.save!
 answer2 = Answer.new(content: "On the back with only one pillow behind the head and another one under the knees", question: question1, correct: false)
 answer2.save!
-answer3 = Answer.new(content: "swimming, because it seeks to many muscles at the same time", question: question2, correct: false )
+answer3 = Answer.new(content: "swimming, because it seeks too many muscles at the same time", question: question2, correct: false )
 answer3.save!
 answer4 = Answer.new(content: "Volleyball as it can gives several repeated traumas", question: question2, correct: true)
 answer4.save!
@@ -96,14 +95,434 @@ answer5.save!
 answer6 = Answer.new(content: "Bones. ligaments and cartilage encase the disk", question: question3, correct: false)
 answer6.save!
 
-article1 = Article.new
+article1 = Article.new(title: "Lower back pain in your daily life", category: "lower back", soustitre: "Lower back pain in your common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
 
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
 
-10.times do
-  article = Article.new(
-    title: Faker::Movie.title,
-    reading_time: rand(1..5),
-    category: ["for you", "lower back", "neck", "shoulder"].sample,
-  )
-  article.save!
-end
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article1.save!
+
+article2 = Article.new(title: "Back pain in your daily life", category: "for you", soustitre: "Having Back pain in your daily life is very common and can have several causes you should know about. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is lower back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article2.save!
+
+article3 = Article.new(title: "Neck pain in your daily life", category: "neck", soustitre: "Neck pain is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is neck back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article3.save!
+
+article4 = Article.new(title: "Shoulder pain in your daily life ", category: "shoulder", soustitre: "Shoulder pain is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is shoulder pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article4.save!
+
+article5 = Article.new(title: "Lower back pain in the morning", category: "lower back", soustitre: "Lower back pain in the morning is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article5.save!
+
+article6 = Article.new(title: "Back pain after standing too long", category: "for you", soustitre: "Back pain afer standing too long, like in museum for instance, is very common and you shouldn't worry too much. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is lower back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article6.save!
+
+article7 = Article.new(title: "Neck pain at your desk", category: "neck", soustitre: "Neck pain while we are working at our desk is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is neck back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article7.save!
+
+article8 = Article.new(title: "Shoulder pain in the morning", category: "shoulder", soustitre: "Shoulder pain in the morning is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is shoulder pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article8.save!
+
+article9 = Article.new(title: "Lower back pain after sport", category: "lower back", soustitre: "Lower back pain after sport. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article9.save!
+
+article10 = Article.new(title: "Neck pain in the morning", category: "neck", soustitre: "Neck pain in the morning is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is neck back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article10.save!
+
+article11 = Article.new(title: "Shoulder pain after repeated moves", category: "shoulder", soustitre: "Shoulder pain after repeated moves is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is shoulder pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article11.save!
+
+article12 = Article.new(title: "back pain when you cough", category: "for you", soustitre: "Having back pain when you cough is very serious and should incite you to see a physician. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Pain often gets better with rest, physical therapy and medication. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
+
+    Pain can range from mild to severe. In some cases, pain can make it difficult or impossible to walk, sleep, work or do everyday activities.
+
+    Usually, lower back pain gets better with rest, pain relievers and physical therapy (PT). Cortisone injections and hands-on treatments (like osteopathic or chiropractic manipulation) can relieve pain and help the healing process. Some back injuries and conditions require surgical repair.", h2: "How common is lower back pain?", paragraph2: "Around four out of five people have lower back pain at some point in their lives. It’s one of the most common reasons people visit healthcare providers.
+
+    Some people are more likely to have lower back pain than others. Risk factors for lower back pain include:
+
+        Age: People over 30 have more back pain. Disks (soft, rubbery tissue that cushions the bones in the spine) wear away with age. As the disks weaken and wear down, pain and stiffness can result.
+        Weight: People have overweight/obesity or carry extra weight are more likely to have back pain. Excess weight puts pressure on joints and disks.
+        Overall health: Weakened abdominal muscles can’t support the spine, which can lead to back strains and sprains. People who smoke, drink alcohol excessively or live a sedentary lifestyle have a higher risk of back pain.
+        Occupation and lifestyle: Jobs and activities that require heavy lifting or bending can increase the risk of a back injury.
+        Structural problems: Severe back pain can result from conditions, such as scoliosis, that change spine alignment.
+        Disease: People who have a family history of osteoarthritis, certain types of cancer and other disease have a higher risk of low back pain.
+        Mental health: Back pain can result from depression and anxiety.
+    ", h3: "What are the symptoms of lower back pain?", paragraph3: "Symptoms of lower back pain can come on suddenly or appear gradually. Sometimes, pain occurs after a specific event, such as bending to pick something up. Other times, you may not know what caused the pain.
+
+    Pain may be sharp or dull and achy, and it may radiate to your bottom or down the back of your legs (sciatica). If you strain your back during an activity, you may hear a “pop” when it happened. Pain is often worse in certain positions (like bending over) and gets better when you lie down.
+
+    Other symptoms of lower back pain include:
+
+        Stiffness: It may be tough to move or straighten your back. Getting up from a seated position may take a while, and you might feel like you need to walk or stretch to loosen up. You may notice decreased range of motion.
+        Posture problems: Many people with back pain find it hard to stand up straight. You may stand “crooked” or bent, with your torso off to the side rather than aligned with your spine. Your lower back may look flat instead of curved.
+        Muscle spasms: After a strain, muscles in the lower back can spasm or contract uncontrollably. Muscle spasms can cause extreme pain and make it difficult or impossible to stand, walk or move.
+    ", h4: "What causes lower back pain?", paragraph4: "Many injuries, conditions and diseases can cause lower back pain. They include:
+
+    Strains and sprains: Back strains and sprains are the most common cause of back pain. You can injure muscles, tendons or ligaments by lifting something too heavy or not lifting safely. Some people strain their back by sneezing, coughing, twisting or bending over.
+    Fractures: The bones in the spine can break during an accident, like a car crash or a fall. Certain conditions (such as spondylolysis or osteoporosis) increase the risk of fractures.
+    Disk problems: Disks cushion the vertebrae (small spinal bones). Disks can bulge from their position in the spine and press on a nerve. They can also tear (herniated disk). With age, disks can get flatter and offer less protection (degenerative disk disease).
+    Structural problems: A condition called spinal stenosis happens when the spinal column is too narrow for the spinal cord. Something pinching the spinal cord can cause severe sciatic nerve pain and lower back pain. Scoliosis (curvature of the spine) can lead to pain, stiffness and difficulty moving.
+    Arthritis: Osteoarthritis is the most common type of arthritis to cause lower back pain. Ankylosing spondylitis causes lower back pain, inflammation and stiffness in the spine.
+    Disease: Spine tumors, infections and several types of cancer can cause back pain. Other conditions can cause back pain, too. These include kidney stones and abdominal aortic aneurysm.
+    Spondylolisthesis: This condition causes the vertebrae in the spine to slip out of place. Spondylolisthesis leads to low back pain and often leg pain as well.
+    ")
+article12.save!
