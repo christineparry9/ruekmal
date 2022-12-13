@@ -1,6 +1,5 @@
 .navlist{
   list-style: none;
-  padding-left: 0;
 }
 
 .navlistitem{
@@ -27,20 +26,12 @@
   transition: all 0.5s ease;
 }
 
-.wrapper img{
-  width: 80px;
-}
-
 .wrapper .sidebar ul li a{
   display: block;
-  padding: 13px 13px;
+  padding: 13px 30px;
   color: black;
   font-size: 16px;
   position: relative;
-  width: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 
@@ -50,8 +41,6 @@
     background: #B1EA9A;
     border-top-left-radius: 70px 70px;
     border-bottom-left-radius: 70px 70px;
-    // width: 100px;
-    // margin-left: 20px;
 }
 
 
@@ -62,7 +51,6 @@
 
 .n{
   display:flex;
-  justify-content: right;
-  margin-top: 10px;
-  width:900px
+  justify-content: center;
+  margin-top: 10px
 }

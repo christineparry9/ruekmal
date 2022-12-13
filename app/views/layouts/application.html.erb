@@ -8,24 +8,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
   </head>
 
   <body data-controller="timer">
 
     <div class="wrapper" >
-    <div class="n ">
-        <nav class="navbar navbar-expand-lg navbar-light">
-
+     <div class="c">
+      <div class="n ">
           <div class="counter">
-
-            <form name="form_main">
-              <div class="digits">
-                <span id="hour" class="timerdigits" data-timer-target="hour">00h</span>:<span id="minute"  class="timerdigits" data-timer-target="minute">00m</span>:<span id="second"  class="timerdigits" data-timer-target="second">00s</span>
+            <form name="form_main" class="digits">
+              <div >
+                <h1><span style="font-family: 'Orbitron', sans-serif;" id="hour" class="timerdigits" data-timer-target="hour"style="font-family: 'Orbitron', sans-serif;" >00h</span>:<span id="minute" style="font-family: 'Orbitron', sans-serif;"  class="timerdigits" data-timer-target="minute">00m</span>:<span id="second"  class="timerdigits"style="font-family: 'Orbitron', sans-serif;"  data-timer-target="second">00s</span></h1>
               </div>
+              <div class="standpause">
+              <button data-timer-target="stand" data-action="click->timer#stand" class="counterbutton" type="button" name="stand"><i class="fa-solid fa-person"></i></button>
+              <button data-timer-target="pause" data-action="click->timer#pause" class="counterbutton" type="button"name="pause"><i class="fa-solid fa-pause"></i></button>
 
-              <button data-timer-target="stand" data-action="click->timer#stand" class="counterbutton" type="button" name="stand">stand</button>
-              <button data-timer-target="pause" data-action="click->timer#pause" class="counterbutton" type="button"name="pause">pause</button>
-              <button data-timer-target="finish" data-action="click->timer#reset" class="counterbutton" type="button" name="reset">finish session</button>
+              <button id="finish"data-timer-target="finish" data-action="click->timer#reset" class="counterbutton" type="button" name="reset">finish session</button>
+              </div>
             </form>
           </div>
         </nav>
@@ -33,9 +35,10 @@
         <!--Top menu -->
 
 
+
               <div class="sidebar">
                 <div class="d-flex flex-column justify-content-center" style="display: flex; align-items: center;">
-                 <%= image_tag "rueckmal-logo.png", alt: "logo" %>
+                 <%= image_tag "rueckmal-logo.png", alt: "logo", width: 100 %>
                 </div>
                 <ul class="navlist" style="display: flex; align-items: center; flex-direction: column;">
                 <div class="d-flex flex-column justify-content-center">
