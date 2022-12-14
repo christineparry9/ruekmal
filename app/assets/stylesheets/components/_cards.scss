@@ -39,6 +39,7 @@
 
 .article-card {
   display: grid;
+  justify-content: center;
   align-items: flex-start;
   border-bottom: 10px;
   border-color: rgb(85, 81, 81);
@@ -48,20 +49,22 @@
   color: #00193C;
   background-color: rgb(255, 255, 255);
   margin: 15px;
-  padding: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
   width: 270px;
   height: auto;
 
 }
-.image-article {
-  margin-left: 10px;
-}
 
 .card-title {
   color: #00193C;
+  text-align: center
 }
 .card-body {
   color: #00193C;
+  padding-left: 2px;
+  padding-right: 30px;
+  text-align: justify;
 }
 
 .program-card{
@@ -82,4 +85,9 @@
   object-fit: cover;
   height: 15vh;
   width: 100%;
+}
+
+.image-article {
+  object-position: center;
+  object-fit: cover;
 }
