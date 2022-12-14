@@ -25,6 +25,7 @@
   justify-content: flex-end;
   padding-top:30px;
   align-content: flex-end;
+  margin-bottom: 1--px;
 }
 
 
@@ -53,17 +54,19 @@
 }
 
 .refresh {
-  background-color: $ruekmaldarkblue;
-  color: white;
+  background-color: white;
+  color: $ruekmaldarkblue;
   padding: 10px;
   border-radius: 5px;
   padding: 10px;
   border-color: $ruekmallightgreen;
   border-style: solid;
-
+  margin-top: 30px;
+  margin-left: 200px;
 }
 
 .refresh:hover {
   cursor: pointer;
-  color: white
+  color: white;
+  background-color: $ruekmaldarkblue;
 }
