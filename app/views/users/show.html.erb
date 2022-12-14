@@ -7,7 +7,7 @@
              <h4 class="mt-5"> <strong> Hi <%= @user.first_name %>! </strong></h4><p> <%= @user.workplace.name %></p>
            </div>
            <div>
-             <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+             <img class="avatar-large" alt="avatar-large" src="<%= @user.avatar %>" />
            </div>
           </div>
 
@@ -27,7 +27,7 @@
             <ol>
             <% @workplace.each do |user| %>
               <li class="staffscore">
-              <div><%= user.first_name %></div>  <div><%= user.number_of_points %> points</div></li>
+              <div><%= user.first_name %>&nbsp;<img class="avatar" alt="avatar" src="<%= user.avatar %>" /></div>  <div><%= user.number_of_points %> points</div></li>
             <% end %>
             </ol>
 

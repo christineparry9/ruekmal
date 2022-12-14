@@ -2,7 +2,6 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["stand", "pause", "sit", "finish", "hour", "minute", "second", "goal", "totalpoints"]
-
   connect() {
 console.log("whateverswhateverwhateverwhatever")
     if (!localStorage.getItem("isOn")) {
@@ -16,7 +15,6 @@ console.log("whateverswhateverwhateverwhatever")
     if (localStorage.getItem("isOn")== "true") {
       this.stand()
       console.log("is on")
-
     }
     this.hour = localStorage.getItem("hour");
     this.minute = localStorage.getItem("minute");
@@ -25,12 +23,10 @@ console.log("whateverswhateverwhateverwhatever")
     this.hourTarget.innerHTML = this.#returnData(this.hour);
     this.minuteTarget.innerHTML = this.#returnData(this.minute);
     this.secondTarget.innerHTML = this.#returnData(this.second);
-
     }
   #returnData(input) {
     return input > 10 ? input : `0${input}`
   }
-
   #timer() {
       if ((this.millisecond += 10) == 1000) {
         this.millisecond = 0;
@@ -51,22 +47,45 @@ console.log("whateverswhateverwhateverwhatever")
       localStorage.setItem("minute", this.minute)
       localStorage.setItem("second", this.second)
     }
-
-
   stand(event) {
     localStorage.setItem("isOn", true)
     this.cron = setInterval(() => { this.#timer(); }, 10);
     console.log( localStorage.getItem("isOn"));
+    this.standTarget.style.backgroundColor = '#9CCBB8';
+    this.standTarget.style.color = '#1E3F66';
+    this.standTarget.style.borderColor = '#9CCBB8';
+    this.pauseTarget.style.backgroundColor = '#1E3F66';
+    this.pauseTarget.style.color = 'white';
+    this.pauseTarget.style.borderColor = '#1E3F66';
+    this.finishTarget.style.backgroundColor = '#1E3F66';
+    this.finishTarget.style.color = 'white';
+    this.finishTarget.style.borderColor = '#1E3F66';
   }
-
   pause(event) {
     clearInterval(this.cron);
     localStorage.setItem("isOn", false)
     console.log( localStorage.getItem("isOn"))
+    this.standTarget.style.backgroundColor = '#1E3F66';
+    this.standTarget.style.color = 'white';
+    this.standTarget.style.borderColor = '#1E3F66';
+    this.pauseTarget.style.backgroundColor = '#9CCBB8';
+    this.pauseTarget.style.color = '#1E3F66';
+    this.pauseTarget.style.borderColor = '#9CCBB8';
+    this.finishTarget.style.backgroundColor = '#1E3F66';
+    this.finishTarget.style.color = 'white';
+    this.finishTarget.style.borderColor = '#1E3F66';
   }
-
   reset(event) {
     clearInterval(this.cron);
+    this.standTarget.style.backgroundColor = '#1E3F66';
+    this.standTarget.style.color = 'white';
+    this.standTarget.style.borderColor = '#1E3F66';
+    this.pauseTarget.style.backgroundColor = '#1E3F66';
+    this.pauseTarget.style.color = 'white';
+    this.pauseTarget.style.borderColor = '#1E3F66';
+    this.finishTarget.style.backgroundColor = '#1E3F66';
+    this.finishTarget.style.color = 'white';
+    this.finishTarget.style.borderColor = '#1E3F66';
     const spliturl = document.URL.split("/")
     const url = "/users/" + spliturl[spliturl.length-1]
     let h = this.hourTarget.innerText * 60;
@@ -107,6 +126,4 @@ console.log("whateverswhateverwhateverwhatever")
     }
     )
   }
-
-
 }

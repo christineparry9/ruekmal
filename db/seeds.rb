@@ -24,29 +24,29 @@ program4 = Program.create(name: "Mindfulness", standing_points_goal: 120, standi
 program5 = Program.create(name: "Flexibility", standing_points_goal: 120, standing_goal: 150, program_length: 25, image: "undraw_workout.png")
 program6 = Program.create(name: "Full Experience", standing_points_goal: 120, standing_goal: 180, program_length: 50, image: "undraw_personal_trainer.png")
 
-user1 = User.new(number_of_points: 22, first_name: "Christine", program: program1, workplace: workplace, email: "christine@test.com", password: "testtest", password_confirmation: "testtest")
+user1 = User.new(avatar: "https://kitt.lewagon.com/placeholder/users/cveneziani", number_of_points: 22, first_name: "Christine", program: program1, workplace: workplace, email: "christine@test.com", password: "testtest", password_confirmation: "testtest")
 user1.save!
 
-user2 = User.new(number_of_points: 25, first_name: "Lena", program: program1, workplace: workplace, email: "lena@test.com", password: "testtest", password_confirmation: "testtest")
+user2 = User.new(avatar: "https://kitt.lewagon.com/placeholder/users/sarahlafer", number_of_points: 25, first_name: "Lena", program: program1, workplace: workplace, email: "lena@test.com", password: "testtest", password_confirmation: "testtest")
 user2.save!
 p user2
 
-user3 = User.new(number_of_points: 60, first_name: "Constance", program: program1, workplace: workplace, email: "constance@test.com", password: "testtest", password_confirmation: "testtest")
+user3 = User.new(avatar: "https://avatars.githubusercontent.com/u/68972820?v=4", number_of_points: 60, first_name: "Constance", program: program1, workplace: workplace, email: "constance@test.com", password: "testtest", password_confirmation: "testtest")
 user3.save!
 
-user4 = User.new(number_of_points: 5, first_name: "Dareos", program: program1, workplace: workplace, email: "dareos@test.com", password: "testtest", password_confirmation: "testtest")
+user4 = User.new(avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1610540256/mbf03tpkmvwrgufdaezz.jpg", number_of_points: 5, first_name: "Dareos", program: program1, workplace: workplace, email: "dareos@test.com", password: "testtest", password_confirmation: "testtest")
 user4.save!
 
-user5 = User.new(number_of_points: 20, first_name: "Domenico", program: program1, workplace: workplace, email: "domenico@test.com", password: "testtest", password_confirmation: "testtest")
+user5 = User.new(avatar: "https://kitt.lewagon.com/placeholder/users/arthur-littm", number_of_points: 20, first_name: "Domenico", program: program1, workplace: workplace, email: "domenico@test.com", password: "testtest", password_confirmation: "testtest")
 user5.save!
 
-user6 = User.new(number_of_points: 120, first_name: "Arbi", program: program1, workplace: workplace, email: "arbi@test.com", password: "testtest", password_confirmation: "testtest")
+user6 = User.new(avatar: "https://kitt.lewagon.com/placeholder/users/krokrob", number_of_points: 120, first_name: "Arbi", program: program1, workplace: workplace, email: "arbi@test.com", password: "testtest", password_confirmation: "testtest")
 user6.save!
 
 exercise1 = Exercise.new(category: "lower", video_url: "https://www.youtube.com/embed/t_uR01Dx9Mk", length: 3, title: "4 Best lower back stretches")
 exercise1.save
 
-exercise2 = Exercise.new(category: "neck", video_url: "https://www.youtube.com/embed/XtHfEI5DUE0", length: 10, title: "Daily stretches for neck pain")
+exercise2 = Exercise.new(category: "neck", video_url: "https://www.youtube.com/embed/LkUGx1GtJHE", length: 1, title: "Daily stretches for neck pain")
 exercise2.save
 
 exercise3 = Exercise.new(category: "lower", video_url: "https://www.youtube.com/embed/XeXz8fIZDCE", length: 15, title: "Yoga for lower back pain")
@@ -61,8 +61,7 @@ exercise5.save
 exercise6 = Exercise.new(category: "lower", video_url: "https://www.youtube.com/embed/3Z2fZ7TCBfw", length: 3, title: "Most effective psoas release")
 exercise6.save
 
-
-program_exercise = ProgramExercise.new(exercise: exercise1, program: program1)
+program_exercise = ProgramExercise.new(exercise: exercise2, program: program3)
 program_exercise.save
 
 #creating some questions/answers for the knowledge page
