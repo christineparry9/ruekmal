@@ -33,7 +33,9 @@
     <button class="tablinks" onclick="openCity(event, 'lower back')">Lower Back</button>
     <button class="tablinks" onclick="openCity(event, 'neck')">Neck</button>
     <button class="tablinks" onclick="openCity(event, 'shoulder')">Shoulder</button>
-    <button class="tablinks" onclick="openCity(event, 'upper back')">Upper Back</button>
+
+    <button class="tablinks" onclick="openCity(event, 'Upper back')">Upper Back</button>
+
   </div>
 
   <div id="for you" class="tabcontent">
@@ -68,9 +70,11 @@
     </div>
   </div>
 
-   <div id="upper back" class="tabcontent">
+
+    <div id="Upper Back" class="tabcontent">
     <div class="grid-container">
-      <% @articles_upper_back.each do |article| %>
+      <% @articles_shoulder.each do |article| %>
+
         <%= render "article", article: article %>
       <% end %>
     </div>

@@ -20,7 +20,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 120px;
+  width: 123px;
   height: 100%;
   padding: 20px 0;
   transition: all 0.5s ease;
@@ -38,7 +38,7 @@
 
 .wrapper .sidebar ul li a:hover,
 .wrapper .sidebar ul li a.active{
-    background: #B1EA9A;
+    background: $ruekmallightgreen;
     border-top-left-radius: 70px 70px;
     border-bottom-left-radius: 70px 70px;
 }
@@ -53,4 +53,12 @@
   display:flex;
   justify-content: center;
   margin-top: 10px
+}
+
+#logo{
+  color: $ruekmallightgreen;
+  padding: 5px;
+  border-top: solid;
+  border-right: solid;
+  font-size: 20px;
 }
