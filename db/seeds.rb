@@ -40,6 +40,9 @@ user4.save!
 user5 = User.new(number_of_points: 20, first_name: "Domenico", program: program1, workplace: workplace, email: "domenico@test.com", password: "testtest", password_confirmation: "testtest")
 user5.save!
 
+user6 = User.new(number_of_points: 120, first_name: "Arbi", program: program1, workplace: workplace, email: "arbi@test.com", password: "testtest", password_confirmation: "testtest")
+user6.save!
+
 exercise1 = Exercise.new(category: "lower", video_url: "https://www.youtube.com/embed/t_uR01Dx9Mk", length: 3, title: "4 Best lower back stretches")
 exercise1.save
 
