@@ -1,35 +1,37 @@
 <div class="c">
-  <div class="c2">
+  <div class="c2" id="user">
        <div class="programcard">
-     <div class="userinfo">
-       <div>
-        <h4> Hi <%= @user.first_name %>! </h4>
-        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-         <p>- <%= @user.workplace.name %></p>
-       </div>
-          <p><i class="fa-solid fa-clipboard-list"></i> &nbsp; <%= @user.program.name %> </p>
-              <%= render "total_points" %>
-          <p><i class="fa-solid fa-flag-checkered"></i><strong data-timer-target="goal" id="goal"> &nbsp; <%= @user.program.standing_goal.to_i %></strong> minutes</p>
-        </div>
-          <br>
-      </div>
-  <br>
-  <div>
-        <div class="scoreboard">
-          <div id="workplacename">
-             <p> SCOREBOARD</p>
+         <div class="userinfo">
+           <div>
+             <h4 class="mt-5"> Hi <%= @user.first_name %>! </h4><p> <%= @user.workplace.name %></p>
+           </div>
+           <div>
+             <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+           </div>
           </div>
-        <div>
+
+
+          <div class ="d-flex mt-5">
+            <div> <p><i class="fa-solid fa-clipboard-list"></i> &nbsp; <%= @user.program.name %> </p> </div>
+            <div>   <%= render "total_points" %></div>
+            <div>   <p><i class="fa-solid fa-flag-checkered"></i><strong data-timer-target="goal" id="goal"> <%= @user.program.standing_goal.to_i %></strong> minutes</p></div>
+          </div>
+         </div>
+
+        <div class="scoreboard">
+
+             <p> SCOREBOARD</p>
+
+
             <ol>
             <% @workplace.each do |user| %>
               <li class="staffscore">
               <div><%= user.first_name %></div>  <div><%= user.number_of_points %> points</div></li>
             <% end %>
             </ol>
-        </div>
-        <div>
+
           <a class="refresh" onClick="window.location.reload()">Update</a>
-        </div>
+    </div>
   </div>
-  </div>
+</div>
 </div>

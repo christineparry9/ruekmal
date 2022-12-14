@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["stand", "pause", "sit", "finish", "hour", "minute", "second", "goal", "totalpoints"]
 
   connect() {
-
+console.log("hihihihihihihihi")
     if (!localStorage.getItem("isOn")) {
       localStorage.setItem("isOn", false)
       localStorage.setItem("hour", 4)
@@ -56,7 +56,8 @@ export default class extends Controller {
   stand(event) {
     localStorage.setItem("isOn", true)
     this.cron = setInterval(() => { this.#timer(); }, 10);
-    console.log( localStorage.getItem("isOn"))
+    console.log( localStorage.getItem("isOn"));
+    console.log(this.minuteTarget.innerText);
   }
 
   pause(event) {
@@ -72,9 +73,7 @@ export default class extends Controller {
     let t = Number(h) + Number(m);
     let goal = this.goalTarget.innerHTML
     const time = goal.match(/\d+/)[0]
-    const goal2 = goal
     let total = this.totalpointsTarget.lastChild.innerHTML
-
     let nt = Number(total);
     if (t >= time) {  nt += 5 };
     let formData = new FormData();
