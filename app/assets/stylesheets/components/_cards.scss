@@ -57,6 +57,13 @@
   width: 270px;
   height: auto;
 }
+.article-card:last-of-type{
+  margin-right: 0!important;
+}
+
+.article-card:first-of-type{
+  margin-left: 0!important;
+}
 
 .card-title {
   color: #00193C;
@@ -66,19 +73,20 @@
 .card-body {
   color: #00193C;
 }
-.image-article {
-  width: 100%;
-  padding-left: 15px;
+.article-card .image-article {
+
+  padding-left: 4px;
 
 }
 
 .program-card{
   background-color: white;
-  padding: 5px;
-  border-bottom: 0.5px solid #ddd;
+  padding: 0px;
+  border: 0.5px solid #ddd;
   margin: 10px;
   border-radius: 5px;
   width: 350px;
+  padding-left: 0px;
 }
 
 .program-content {
@@ -88,6 +96,8 @@
 
 .program-image {
   object-fit: cover;
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }

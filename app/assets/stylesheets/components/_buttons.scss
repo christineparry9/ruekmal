@@ -12,7 +12,7 @@
 
 .button-quiz {
   display: block;
-  background-color: #00193C;
+  background-color: $ruekmaldarkblue;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
@@ -24,14 +24,14 @@
   margin: 10px auto;
 }
 .button-quiz:hover {
-  background-color: #B1EA9A;
-  color: #00193C;
+  background-color: $ruekmallightgreen;
+  color: $ruekmaldarkblue;
   transition: 0.2s;
 }
 
 .button-read {
   display: block;
-  background-color:  #00193C;
+  background-color:  $ruekmaldarkblue;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
@@ -63,7 +63,7 @@
 
 .top-closing {
   display: block;
-  background-color: #B1EA9A;
+  background-color: $ruekmallightgreen;
   color:#00193C;
   border: none;
   border-radius: 10px;
@@ -78,7 +78,7 @@
 .button-program {
   display: block;
   background-color: transparent;
-  border: 1px solid #B1EA9A;
+  border: 1px solid $ruekmallightgreen;
   width: 120px;
   height: 40px;
   border-radius: 3px;
@@ -87,8 +87,8 @@
 
 .button-program-chosen {
   display: block;
-  background-color: #B1EA9A;
-  border: 1px solid #B1EA9A;
+  background-color: $ruekmallightgreen;
+  border: 1px solid $ruekmallightgreen;
   width: 120px;
   height: 40px;
   border-radius: 3px;
@@ -96,5 +96,5 @@
 }
 
 .button-program:hover {
-  background-color: #B1EA9A;
+  background-color: $ruekmallightgreen;
 }

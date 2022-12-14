@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["stand", "pause", "sit", "finish", "hour", "minute", "second", "goal", "totalpoints"]
 
   connect() {
-console.log("hihihihihihihihi")
+console.log("whateverswhateverwhateverwhatever")
     if (!localStorage.getItem("isOn")) {
       localStorage.setItem("isOn", false)
       localStorage.setItem("hour", 4)
@@ -57,7 +57,6 @@ console.log("hihihihihihihihi")
     localStorage.setItem("isOn", true)
     this.cron = setInterval(() => { this.#timer(); }, 10);
     console.log( localStorage.getItem("isOn"));
-    console.log(this.minuteTarget.innerText);
   }
 
   pause(event) {
@@ -68,19 +67,24 @@ console.log("hihihihihihihihi")
 
   reset(event) {
     clearInterval(this.cron);
+    const spliturl = document.URL.split("/")
+    const url = "/users/" + spliturl[spliturl.length-1]
     let h = this.hourTarget.innerText * 60;
     let m = this.minuteTarget.innerText;
     let t = Number(h) + Number(m);
-    let goal = this.goalTarget.innerHTML
-    const time = goal.match(/\d+/)[0]
-    let total = this.totalpointsTarget.lastChild.innerHTML
+    let goal;
+    let time;
+    let total;
+    if (document.URL.match(url)) {
+      goal = this.goalTarget.innerHTML
+      time = goal.match(/\d+/)[0]
+      total = this.totalpointsTarget.lastChild.innerHTML
+    }
     let nt = Number(total);
     if (t >= time) {  nt += 5 };
     let formData = new FormData();
     formData.append("user[number_of_points]", nt)
     const token = document.querySelector('meta[name="csrf-token"]').content
-    const spliturl = document.URL.split("/")
-    const url = "/users/" + spliturl[spliturl.length-1]
     fetch(url,  {
       method: "PATCH",
       headers: { "Accept": "text/plain", "X-CSRF-Token" : token },
