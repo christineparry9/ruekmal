@@ -8,7 +8,7 @@
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
-  width: 500px;
+  width: 400px;
   display:flex;
   justify-content: space-between;
 
@@ -21,10 +21,10 @@
   margin-left: -60px;
 }
 .scoreboard{
-
-  justify-content: space-between;
+  display:flex-column;
+  justify-content: flex-end;
   padding-top:30px;
-  align-items: center
+  align-content: flex-end;
 }
 
 
