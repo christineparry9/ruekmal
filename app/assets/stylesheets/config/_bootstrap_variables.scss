@@ -33,3 +33,9 @@ $link-decoration:         none, !default;
 //   $('#myInput').trigger('focus')
 // })
 $body-bg:                 #fff !default;
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+    border-radius: 5px;
+  }
+}

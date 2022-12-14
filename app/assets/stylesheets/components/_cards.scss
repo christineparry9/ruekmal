@@ -13,7 +13,10 @@
   color: #00193C;
   background-color: rgb(255, 255, 255);
   margin: auto;
-  padding: 30px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
   justify-content: space-between;
 }
 
@@ -53,18 +56,20 @@
   padding-right: 10px;
   width: 270px;
   height: auto;
-
 }
 
 .card-title {
   color: #00193C;
-  text-align: center
+  text-align: center;
+  padding-top: 10px;
 }
 .card-body {
   color: #00193C;
-  padding-left: 2px;
-  padding-right: 30px;
-  text-align: justify;
+}
+.image-article {
+  width: 100%;
+  padding-left: 15px;
+
 }
 
 .program-card{
@@ -85,14 +90,4 @@
   object-fit: cover;
   height: 130px;
   width: 130px;
-}
-
-.image-article {
-  object-position: center;
-  object-fit: cover;
-}
-
-col col-4 article-card {
-  object-position: center;
-  object-fit: cover;
 }
