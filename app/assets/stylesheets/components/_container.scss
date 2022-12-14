@@ -4,7 +4,7 @@
   margin-top: 50px;
   width: 1000px;
   color: #00193C;
-  background-color: rgb(255, 255, 255);
+  background-color: $body-bg;
 }
 
 .c3{
@@ -41,10 +41,10 @@
   padding-top: 10px;
   width: 270px;
   height: 250px;
-  margin:10px;
+  margin-bottom: 50px;
   background-color: $ruekmaldarkblue;
   border-radius: 5px;
-  color: white;
+  color: $body-bg;
   padding-left:10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -70,6 +70,7 @@
   border-radius: 5px;
   justify-content: space-between;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.03);
+  background-color: white;
 }
 
 .counterbutton{
