@@ -13,7 +13,10 @@
   color: #00193C;
   background-color: rgb(255, 255, 255);
   margin: auto;
-  padding: 30px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
   justify-content: space-between;
 }
 
@@ -39,6 +42,7 @@
 
 .article-card {
   display: grid;
+  justify-content: center;
   align-items: flex-start;
   border-bottom: 10px;
   border-color: rgb(85, 81, 81);
@@ -48,20 +52,24 @@
   color: #00193C;
   background-color: rgb(255, 255, 255);
   margin: 15px;
-  padding: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
   width: 270px;
   height: auto;
-
-}
-.image-article {
-  margin-left: 10px;
 }
 
 .card-title {
   color: #00193C;
+  text-align: center;
+  padding-top: 10px;
 }
 .card-body {
   color: #00193C;
+}
+.image-article {
+  width: 100%;
+  padding-left: 15px;
+
 }
 
 .program-card{

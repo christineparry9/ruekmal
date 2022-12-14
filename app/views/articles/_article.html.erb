@@ -1,5 +1,5 @@
 <div class="col col-4 article-card">
-  <div class= "image-article" ><iframe width="230" height="155" img src= <%= article.image%>></iframe></div>
+  <div class= "image-article" ><img width="230" height="155" src="<%= article.image%>" alt="back pain image"></div>
             <div class=card-title><h4><%= article.title %></h4></div>
             <div class="card-body"><p><%= article.soustitre %></p><!-- Button trigger modal -->
               <button type="button"
@@ -7,15 +7,15 @@
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModalLong-<%=article.id %>"
                       >
-                      Read this article
+                      Read
               </button>
 
               <!-- Modal -->
               <div class="modal fade" id="exampleModalLong-<%=article.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-xl" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h2 class="modal-title" id="exampleModalLongTitle">Back Pain</h2>
+                      <h2 class="modal-title" id="exampleModalLongTitle"><%= article.title %></h2>
                       <%# <button type="button" class="top-closing" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button> %>
