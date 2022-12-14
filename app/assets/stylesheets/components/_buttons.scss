@@ -12,14 +12,21 @@
 
 .button-quiz {
   display: block;
-  background-color: rgb(177, 234, 154);
+  background-color: #00193C;
+  color: rgb(255, 255, 255);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border-right: none;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 5px;
   width: 100px;
   margin: 10px auto;
+}
+.button-quiz:hover {
+  background-color: #B1EA9A;
+  color: #00193C;
+  transition: 0.2s;
 }
 
 .button-read {
@@ -27,12 +34,18 @@
   background-color:  #00193C;
   color: rgb(255, 255, 255);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border-right: none;
   padding-left: 20px;
   padding-right: 20px;
   width: 250px;
   margin: 10px auto;
+}
+
+.button-read:hover {
+  background-color: #B1EA9A;
+  color: #00193C;
+  transition: 0.2s;
 }
 
 .closing-button {

@@ -5,7 +5,8 @@
     <div class="videocard" >
       <% @programs.each do |program| %>
         <div class="program-card d-flex align-items-center">
-          <img src="https://www.shape.com/thmb/VlmW0mcXXdltO--b2kea7Uwpzto=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-back-exercises-for-back-fat_1-ebc5111c7a9c4b1084793358cda7a3e3.jpg" class="program-image" alt="program cover">
+          <%= image_tag program.image, class: "program-image" %>
+          <%# <img src="https://www.shape.com/thmb/VlmW0mcXXdltO--b2kea7Uwpzto=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/best-back-exercises-for-back-fat_1-ebc5111c7a9c4b1084793358cda7a3e3.jpg" class="program-image" alt="program cover"> %>
           <div class="program-content">
 
               <p><strong><%= program.name %></strong></p>

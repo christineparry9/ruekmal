@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_211054) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,9 +30,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
     t.text "paragraph1"
     t.text "paragraph2"
+    t.text "paragraph3"
+    t.text "paragraph4"
+    t.text "paragraph5"
+    t.string "h1"
+    t.string "h2"
+    t.string "h3"
+    t.string "h4"
+    t.string "h5"
+    t.text "soustitre"
   end
 
   create_table "challenges", force: :cascade do |t|
@@ -48,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
     t.integer "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
   end
 
   create_table "program_exercises", force: :cascade do |t|
@@ -67,6 +76,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_093533) do
     t.float "overal_standing_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "questions", force: :cascade do |t|
