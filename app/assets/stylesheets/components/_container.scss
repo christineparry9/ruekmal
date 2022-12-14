@@ -2,21 +2,20 @@
   margin: auto;
   margin-left: 250px;
   margin-top: 50px;
-  width: 900px;
+  width: 1000px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
-
 }
+
 .c3{
   margin: auto;
-  margin-left: 25px;
+  margin-left: 250px;
   margin-top: 50px;
-  width: 800px;
+  width: 1000px;
   color: #00193C;
   background-color: rgb(255, 255, 255);
-  display:flex;
-  justify-content: center;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .c2{
@@ -24,6 +23,12 @@
   width: 100%;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.03);
+
+}
+
+#user{
+  display:flex;
+  justify-content: space-between;
 }
 
 .videocard{
@@ -54,7 +59,7 @@
 
 .iframe{
   width:  350px;
-  margin: 10px
+
 }
 
 
@@ -106,10 +111,17 @@
 
 .userinfo {
   display:flex;
-  justify-content: space-between;
+
 }
 
 .userinfo h4, p {
   color: black;
   padding-left: 30px;
+}
+
+.circle{
+  border: solid;
+
+  width: 150px;
+  height: 150px;
 }

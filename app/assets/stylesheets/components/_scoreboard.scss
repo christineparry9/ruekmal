@@ -8,7 +8,7 @@
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
-  width: 500px;
+  width: 400px;
   display:flex;
   justify-content: space-between;
 
@@ -21,23 +21,24 @@
   margin-left: -60px;
 }
 .scoreboard{
-  display:flex;
-  justify-content: space-between;
+  display:flex-column;
+  justify-content: flex-end;
   padding-top:30px;
-  align-items: center
+  align-content: flex-end;
+  margin-bottom: 1--px;
 }
 
 
-#workplacename{
-transform: rotate(-90deg);
-font-size: 25px;
-}
+// #workplacename{
+// transform: rotate(-90deg);
+// font-size: 25px;
+// }
 
 .programcard{
   background-color: white;
   padding:15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+
   margin-bottom: 100px;
 
 }
@@ -53,17 +54,19 @@ font-size: 25px;
 }
 
 .refresh {
-  background-color: $ruekmaldarkblue;
-  color: white;
+  background-color: white;
+  color: $ruekmaldarkblue;
   padding: 10px;
   border-radius: 5px;
   padding: 10px;
   border-color: $ruekmallightgreen;
   border-style: solid;
-
+  margin-top: 30px;
+  margin-left: 200px;
 }
 
 .refresh:hover {
   cursor: pointer;
-  color: white
+  color: white;
+  background-color: $ruekmaldarkblue;
 }
