@@ -42,7 +42,7 @@
   width: 270px;
   height: 250px;
   margin-bottom: 50px;
-  background-color: $ruekmaldarkblue;
+  background-color: $white;
   border-radius: 5px;
   color: $body-bg;
   padding-left:10px;
@@ -50,11 +50,11 @@
 }
 
 .eachvideo p {
-  color: white;
+  color: $ruekmaldarkblue;
 }
 
 .eachvideo .fa-solid {
-  color: white;
+  color: $ruekmaldarkblue;
 }
 
 .iframe{
