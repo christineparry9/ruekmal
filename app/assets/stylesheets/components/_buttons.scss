@@ -24,7 +24,7 @@
   margin: 10px auto;
 }
 .button-quiz:hover {
-  background-color: #B1EA9A;
+  background-color: #9DB8A3;
   color: #00193C;
   transition: 0.2s;
 }
@@ -43,7 +43,7 @@
 }
 
 .button-read:hover {
-  background-color: #B1EA9A;
+  background-color: #9DB8A3;
   color: #00193C;
   transition: 0.2s;
 }
@@ -60,11 +60,16 @@
   width: 100px;
   margin: 10px auto;
 }
+.closing-button:hover {
+  background-color: #9DB8A3;
+  color: #00193C;
+  transition: 0.2s;
+}
 
 .top-closing {
   display: block;
-  background-color: #B1EA9A;
-  color:#00193C;
+  background-color: #00193C;
+  color:white;
   border: none;
   border-radius: 10px;
   border-right: none;
@@ -73,6 +78,12 @@
   padding-bottom: 5px;
   width: 50px;
   margin-left: 100px;
+}
+
+.top-closing:hover {
+  background-color: #9DB8A3;
+  color: #00193C;
+  transition: 0.2s;
 }
 
 .button-program {
