@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
       @articles_lower_back = Article.where(category: "lower back")
       @articles_neck = Article.where(category: "neck")
       @articles_shoulder = Article.where(category:"shoulder")
+      @articles_upper_back = Article.where(category: "upper back")
+
 
       @question = Question.all.sample
       @answers = @question.answers
