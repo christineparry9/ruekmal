@@ -31,8 +31,8 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   } */
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
+  .rails-default-error-page h3 {
+    font-size: 18px;
     color: white;
     line-height: 1.5em;
   }
@@ -51,6 +51,11 @@
     color: white;
     /* box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17); */
   }
+  h1 {
+    font-size: 56px;
+    font-weight: lighter;
+  }
+
   </style>
 </head>
 
@@ -58,10 +63,12 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
+      <h1>404</h1>
+      <h3>Sorry, the page you were looking for doesn't exist.</h3>
       <p>You may have mistyped the address or the page may have moved.</p>
+      <br>
+      <a href="/" style="color: white;">Go back home</a>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
