@@ -66,11 +66,11 @@ program_exercise.save
 
 #creating some questions/answers for the knowledge page
 
-question1 = Question.new(content: "What position is best for your back when you sleep? On the back or on one side with the knees flexed toward the chest?")
+question1 = Question.new(content: "What position is best for your back when you sleep?")
 question1.save!
-question2 = Question.new(content: "Which of these sports can cause dangerous back injuries? Swimming or volleyball?")
+question2 = Question.new(content: "Which of these sports can cause dangerous back injuries?")
 question2.save!
-question3 = Question.new(content: "Disks cushion vertebrae in the back. They are made of bones or cartilage?")
+question3 = Question.new(content: "Disks cushion vertebrae in the back. What are they made of?")
 question3.save!
 # question5 = Question.new(content: "Which of these is a significant risk factor for backache? Being overweight or beeing short?")
 # question5.save!
@@ -88,13 +88,13 @@ answer1 = Answer.new(content: "On one side with the knees flexed toward the ches
 answer1.save!
 answer2 = Answer.new(content: "On the back with only one pillow behind the head and another one under the knees", question: question1, correct: false)
 answer2.save!
-answer3 = Answer.new(content: "swimming, because it seeks too many muscles at the same time", question: question2, correct: false )
+answer3 = Answer.new(content: "Swimming, because it seeks too many muscles at the same time", question: question2, correct: false )
 answer3.save!
 answer4 = Answer.new(content: "Volleyball as it can gives several repeated traumas", question: question2, correct: true)
 answer4.save!
-answer5 = Answer.new(content: "Cartilage.Ligaments encase the disk", question: question3, correct: true )
+answer5 = Answer.new(content: "Cartilage - Ligaments encase the disk", question: question3, correct: true )
 answer5.save!
-answer6 = Answer.new(content: "Bones. ligaments and cartilage encase the disk", question: question3, correct: false)
+answer6 = Answer.new(content: "Bones - Ligaments and cartilage encase the disk", question: question3, correct: false)
 answer6.save!
 
 article1 = Article.new(title: "Lower back pain in your daily life", category: "lower back", soustitre: "Lower back pain is very common. It can result from a strain (injury) to muscles or tendons in the back. Other causes include arthritis, structural problems and disk injuries. Reduce your risk of low back pain by keeping at a healthy weight and staying active.", h1: "What is back pain?", paragraph1: "Low back pain can result from many different injuries, conditions or diseases — most often, an injury to muscles or tendons in the back.
